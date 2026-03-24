@@ -17,7 +17,7 @@ Once you have the code on the new system, just run these two commands in the pro
 # 1. Install all required modules at once
 npm install
 # 2. Start the development server
-npm run dev
+pnpm run dev
 
 Important Note on Assets
 Make sure the public/ folder is copied over entirely! It contains the critical assets used in the code:
