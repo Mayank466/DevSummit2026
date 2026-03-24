@@ -35,7 +35,7 @@ function Bat({ startX, delay, duration, size }: BatProps) {
   );
 }
 
-export function BatSwarm({ active }: { active: boolean }) {
+export default function BatSwarm({ active }: { active: boolean }) {
   const [bats, setBats] = useState<BatProps[]>([]);
 
   useEffect(() => {

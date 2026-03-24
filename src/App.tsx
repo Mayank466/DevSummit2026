@@ -11,8 +11,8 @@ import Sponsors from "@/components/Sponsors";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import ScrollObserver from "@/components/ScrollObserver";
-import { LoadingScreen } from "@/components/LoadingScreen";
-import { BatSwarm } from "@/components/BatSwarm";
+import LoadingScreen from "@/components/LoadingScreen";
+import BatSwarm from "@/components/BatSwarm";
 import MusicToggle from "@/components/MusicToggle";
 
 const mentors = [

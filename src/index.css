@@ -2168,3 +2168,8 @@ button {
     clip-path: inset(55% 0 0 0);
   }
 }
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

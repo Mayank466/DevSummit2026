@@ -5,7 +5,7 @@ const BOOT_LINES = [
   { text: "INITIALIZING UPSIDE DOWN PROTOCOL...", delay: 100 },
   { text: "BYPASSING HAWKINS FIREWALL", delay: 550 },
   { text: "SIGNAL DETECTED — FREQ: 18.4 Hz", delay: 950 },
-  { text: "SCANNING SECTOR: HAWKINS, INDIANA", delay: 1300 },
+  { text: "SCANNING SECTOR: JAIPUR, RAJASTHAN", delay: 1300 },
   { text: "ENCRYPTED CHANNEL: ESTABLISHED", delay: 1650 },
   { text: "PARTICIPANT COUNT: 2,048 // RISING", delay: 2000 },
   { text: "UPSIDE DOWN ACCESS: GRANTED", delay: 2400 },
@@ -20,7 +20,7 @@ function randomGlitch(length = 6) {
   ).join("");
 }
 
-export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
+export default function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   const [visibleLines, setVisibleLines] = useState<number[]>([]);
   const [progress, setProgress] = useState(0);
   const [glitch, setGlitch] = useState(randomGlitch(8));
@@ -59,9 +59,10 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
         doneRef.current = true;
         clearInterval(glitchInterval);
         setExitStarted(true);
-        setTimeout(onComplete, 900);
+        // Sync with exit animation duration
+        setTimeout(onComplete, 800);
       }
-    }, 3500);
+    }, 4500);
 
     return () => {
       clearInterval(glitchInterval);
@@ -159,7 +160,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
                   style={{
                     background:
                       "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%)",
-                    animation: "shimmer 1.2s linear infinite",
+                    animation: "shimmer 1.8s linear infinite",
                   }}
                 />
               </div>
