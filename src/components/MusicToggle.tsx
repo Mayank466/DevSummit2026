@@ -10,7 +10,7 @@ export default function MusicToggle() {
   useEffect(() => {
     const audio = new Audio("/strangerthings_theme.mp3");
     audio.loop = true;
-    audio.volume = 0.25;
+    audio.volume = 0.65;
     audioRef.current = audio;
 
     // Try autoplay immediately
@@ -57,9 +57,9 @@ export default function MusicToggle() {
   return (
     <button id="music-toggle" onClick={toggleMusic} title={isPlaying ? "Mute" : "Play music"}>
       <div className="music-toggle-container">
-        <img 
-          src={isPlaying ? "/s on.jpeg" : "/s off.jpeg"} 
-          alt="Music Toggle" 
+        <img
+          src={isPlaying ? "/s on.jpeg" : "/s off.jpeg"}
+          alt="Music Toggle"
           className="music-toggle-icon"
         />
       </div>

@@ -11,6 +11,7 @@ import MusicToggle from "@/components/MusicToggle";
 const About = lazy(() => import("@/components/About"));
 const Countdown = lazy(() => import("@/components/Countdown"));
 const Themes = lazy(() => import("@/components/Themes"));
+const Timeline = lazy(() => import("@/components/Timeline"));
 const Prizes = lazy(() => import("@/components/Prizes"));
 const People = lazy(() => import("@/components/People"));
 const Sponsors = lazy(() => import("@/components/Sponsors"));
@@ -66,6 +67,7 @@ export default function Home() {
             <About />
             <Countdown />
             <Themes />
+            <Timeline />
             <Prizes />
             <Sponsors />
             <People id="mentors" title="The Masters" subtitle="Gurus who have survived the void" people={mentors} titleGlowClass="primary-glow" />

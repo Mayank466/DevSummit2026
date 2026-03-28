@@ -10,7 +10,7 @@ export default function About() {
               <div className="title-bar"></div>
             </div>
             <div className="about-paragraphs">
-              <p>A 48-hour hackathon where the most daring coders enter the Upside Down to build the future. Reality as you know it is just a suggestion.</p>
+              <p>A 24-hour hackathon where the most daring coders enter the Upside Down to build the future. Reality as you know it is just a suggestion.</p>
               <p>Form your party, gather your supplies, and prepare to face complex challenges across AI, Web3, and beyond. The demogorgons of spaghetti code await. Will you survive the night?</p>
             </div>
           </div>

@@ -1,19 +1,6 @@
 export default function Themes() {
   const themes = [
     {
-      title: "AI & Machine Learning",
-      desc: "Train models that blur the line between human and synthetic consciousness.",
-      gradient: "from-red-900",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
-          <path d="M12 2a4 4 0 0 1 4 4c0 1.95-2 3-2 8h-4c0-5-2-6.05-2-8a4 4 0 0 1 4-4z" />
-          <path d="M10 14h4" />
-          <path d="M10 18h4" />
-          <path d="M11 22h2" />
-        </svg>
-      )
-    },
-    {
       title: "Web3 & Blockchain",
       desc: "Build decentralized networks immune to centralized control.",
       gradient: "from-red-800",
@@ -27,8 +14,8 @@ export default function Themes() {
       )
     },
     {
-      title: "Cybersecurity",
-      desc: "Fortify systems against breaches from the other side.",
+      title: "Bio Tech",
+      desc: "Push the boundaries of human endurance and biology.",
       gradient: "from-red-950",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
@@ -38,13 +25,15 @@ export default function Themes() {
       )
     },
     {
-      title: "AR/VR & Metaverse",
-      desc: "Construct alternate realities to escape the mundane.",
+      title: "Next Gen AI/ML",
+      desc: "Train models that blur the line between human and synthetic consciousness.",
       gradient: "from-red-900",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
-          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
-          <circle cx="12" cy="12" r="3" />
+          <path d="M12 2a4 4 0 0 1 4 4c0 1.95-2 3-2 8h-4c0-5-2-6.05-2-8a4 4 0 0 1 4-4z" />
+          <path d="M10 14h4" />
+          <path d="M10 18h4" />
+          <path d="M11 22h2" />
         </svg>
       )
     },
@@ -59,8 +48,19 @@ export default function Themes() {
       )
     },
     {
-      title: "HealthTech",
-      desc: "Push the boundaries of human endurance and biology.",
+      title: "IOT",
+      desc: "Build smart, connected solutions using IoT to solve real-world problems through automation and data.",
+      gradient: "from-red-900",
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      )
+    },
+    {
+      title: "Green Tech",
+      desc: "Create sustainable solutions using green technology to tackle environmental challenges and promote a cleaner future.",
       gradient: "from-red-950",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">

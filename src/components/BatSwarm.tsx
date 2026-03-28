@@ -40,7 +40,7 @@ export default function BatSwarm({ active }: { active: boolean }) {
 
   useEffect(() => {
     if (active) {
-      const newBats = Array.from({ length: 120 }).map((_, i) => ({
+      const newBats = Array.from({ length: 80 }).map((_, i) => ({
         id: i,
         startX: Math.random() * 100,
         delay: Math.random() * 8,
