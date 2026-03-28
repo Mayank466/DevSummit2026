@@ -35,6 +35,7 @@ export default function Navbar() {
               src="/logo-devsummit.png" 
               alt="DEVSUMMIT 2026" 
               className="nav-logo-img"
+              fetchPriority="high"
             />
           </a>
           <div className="nav-links">

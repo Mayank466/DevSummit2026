@@ -2,13 +2,12 @@ export default function Hero() {
   return (
     <section className="hero-section relative overflow-hidden isolate">
       {/* 1. Underlying gradients (must be behind the image explicitly) */}
-      <div className="hero-bg" style={{ zIndex: -1 }}>
+      <div className="hero-bg -z-10">
         <div className="hero-gradient-top"></div>
         <div className="hero-gradient-sides"></div>
       </div>
       {/* 2. The background image itself with smooth edge blending */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        zIndex: 0,
+      <div className="absolute inset-0 pointer-events-none z-0" style={{
         backgroundImage: 'url(/bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -19,9 +18,17 @@ export default function Hero() {
         WebkitMaskComposite: 'destination-in',
         maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 55%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
         maskComposite: 'intersect',
-      }}></div>
+      }}>
+        {/* Hidden img for fetch priority */}
+        <img 
+          src="/bg.png" 
+          alt="" 
+          style={{ display: 'none' }} 
+          fetchPriority="high" 
+        />
+      </div>
 
-      <div className="hero-content" style={{ zIndex: 10 }}>
+      <div className="hero-content z-10">
         <div className="hero-title-block animate-on-load relative">
           {/* Text Spotlight to detach from background */}
           <div className="absolute inset-x-[-20%] inset-y-[-50%] bg-[radial-gradient(circle,rgba(255,0,0,0.1)_0%,transparent_70%)] pointer-events-none blur-3xl z-0"></div>
@@ -31,6 +38,7 @@ export default function Hero() {
               src="/logo.png"
               alt="DEVSUMMIT 2026"
               className="hero-logo animate-on-load"
+              fetchPriority="high"
             />
           </div>
           <div className="hero-tagline relative z-10">
@@ -46,7 +54,7 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <div className="hero-fade-bottom" style={{ zIndex: -1 }}></div>
+      <div className="hero-fade-bottom -z-10"></div>
     </section>
   );
 }

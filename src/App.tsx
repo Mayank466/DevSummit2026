@@ -1,20 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Countdown from "@/components/Countdown";
-import Themes from "@/components/Themes";
-import Prizes from "@/components/Prizes";
-import People from "@/components/People";
-import Sponsors from "@/components/Sponsors";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import ScrollObserver from "@/components/ScrollObserver";
 import LoadingScreen from "@/components/LoadingScreen";
 import BatSwarm from "@/components/BatSwarm";
 import MusicToggle from "@/components/MusicToggle";
+
+// Lazy load components below the fold
+const About = lazy(() => import("@/components/About"));
+const Countdown = lazy(() => import("@/components/Countdown"));
+const Themes = lazy(() => import("@/components/Themes"));
+const Prizes = lazy(() => import("@/components/Prizes"));
+const People = lazy(() => import("@/components/People"));
+const Sponsors = lazy(() => import("@/components/Sponsors"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const Footer = lazy(() => import("@/components/Footer"));
+const ScrollObserver = lazy(() => import("@/components/ScrollObserver"));
 
 const mentors = [
   { id: 'm1', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
@@ -55,23 +57,24 @@ export default function Home() {
         <div className="upside-down-particles"></div>
         <BatSwarm active={showBats} />
 
-        <ScrollObserver />
+        <Suspense fallback={null}>
+          <ScrollObserver />
+          <Navbar />
 
-        <Navbar />
+          <main>
+            <Hero />
+            <About />
+            <Countdown />
+            <Themes />
+            <Prizes />
+            <Sponsors />
+            <People id="mentors" title="The Masters" subtitle="Gurus who have survived the void" people={mentors} titleGlowClass="primary-glow" />
+            <People id="members" title="The Party" subtitle="The architects behind the madness" people={party} titleGlowClass="white-glow" />
+            <FAQ />
+          </main>
 
-        <main>
-          <Hero />
-          <About />
-          <Countdown />
-          <Themes />
-          <Prizes />
-          <Sponsors />
-          <People id="mentors" title="The Masters" subtitle="Gurus who have survived the void" people={mentors} titleGlowClass="primary-glow" />
-          <People id="members" title="The Party" subtitle="The architects behind the madness" people={party} titleGlowClass="white-glow" />
-          <FAQ />
-        </main>
-
-        <Footer />
+          <Footer />
+        </Suspense>
       </div>
       <MusicToggle />
     </>

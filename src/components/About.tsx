@@ -1,8 +1,8 @@
 export default function About() {
   return (
     <section id="about" className="section about-section relative overflow-hidden isolate" style={{ background: 'transparent' }}>
-      <div className="glow-bg glow-left" style={{ zIndex: -1 }}></div>
-      <div className="section-container relative" style={{ zIndex: 10 }}>
+      <div className="glow-bg glow-left -z-10"></div>
+      <div className="section-container relative z-10">
         <div className="about-grid">
           <div className="about-text scroll-animate">
             <div className="title-block">
