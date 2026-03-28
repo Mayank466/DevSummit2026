@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Countdown from "@/components/Countdown";
 import Themes from "@/components/Themes";
+import Prizes from "@/components/Prizes";
 import People from "@/components/People";
 import Sponsors from "@/components/Sponsors";
 import FAQ from "@/components/FAQ";
@@ -16,21 +17,21 @@ import BatSwarm from "@/components/BatSwarm";
 import MusicToggle from "@/components/MusicToggle";
 
 const mentors = [
-  { id: 'm1', name: 'Alex Chen', role: 'AI Research Lead', company: 'Google AI' },
-  { id: 'm2', name: 'Sarah Voss', role: 'Senior Engineer', company: 'OpenAI' },
-  { id: 'm3', name: 'Dev Kumar', role: 'Staff Developer', company: 'Meta' },
-  { id: 'm4', name: 'Aria Patel', role: 'Cloud Architect', company: 'Microsoft' },
-  { id: 'm5', name: 'Jason Lee', role: 'Principal Engineer', company: 'AWS' },
-  { id: 'm6', name: 'Nina Torres', role: 'Systems Architect', company: 'Tesla' },
+  { id: 'm1', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'm2', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'm3', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'm4', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'm5', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'm6', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
 ];
 
 const party = [
-  { id: 't1', name: 'Marcus', role: 'Lead Organizer' },
-  { id: 't2', name: 'Eleven', role: 'Hacker Experience' },
-  { id: 't3', name: 'Dustin', role: 'Tech Logistics' },
-  { id: 't4', name: 'Lucas', role: 'Sponsorships' },
-  { id: 't5', name: 'Will', role: 'Design Lead' },
-  { id: 't6', name: 'Max', role: 'Operations' },
+  { id: 't1', name: 'Coming Soon', role: 'Coming Soon' },
+  { id: 't2', name: 'Coming Soon', role: 'Coming Soon' },
+  { id: 't3', name: 'Coming Soon', role: 'Coming Soon' },
+  { id: 't4', name: 'Coming Soon', role: 'Coming Soon' },
+  { id: 't5', name: 'Coming Soon', role: 'Coming Soon' },
+  { id: 't6', name: 'Coming Soon', role: 'Coming Soon' },
 ];
 
 export default function Home() {
@@ -63,6 +64,7 @@ export default function Home() {
           <About />
           <Countdown />
           <Themes />
+          <Prizes />
           <People id="mentors" title="The Masters" subtitle="Gurus who have survived the void" people={mentors} titleGlowClass="primary-glow" />
           <People id="members" title="The Party" subtitle="The architects behind the madness" people={party} titleGlowClass="white-glow" />
           <Sponsors />

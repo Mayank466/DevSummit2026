@@ -1,8 +1,8 @@
 export default function About() {
   return (
-    <section id="about" className="section about-section">
-      <div className="glow-bg glow-left"></div>
-      <div className="section-container">
+    <section id="about" className="section about-section relative overflow-hidden isolate" style={{ background: 'transparent' }}>
+      <div className="glow-bg glow-left" style={{ zIndex: -1 }}></div>
+      <div className="section-container relative" style={{ zIndex: 10 }}>
         <div className="about-grid">
           <div className="about-text scroll-animate">
             <h2 className="section-title">THE <span className="text-primary text-glow">INITIATION</span></h2>
@@ -20,12 +20,12 @@ export default function About() {
             </div>
             <div className="stat-card scroll-animate" style={{ "--delay": "0.1s" } as React.CSSProperties}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5"><path d="M6 3h12l4 6-10 13L2 9z" /></svg>
-              <span className="stat-value">₹1,50,000</span>
+              <span className="stat-value">₹5,00,000</span>
               <span className="stat-label">Prize Pool</span>
             </div>
             <div className="stat-card scroll-animate" style={{ "--delay": "0.2s" } as React.CSSProperties}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-              <span className="stat-value">48</span>
+              <span className="stat-value">24</span>
               <span className="stat-label">Hours</span>
             </div>
             <div className="stat-card scroll-animate" style={{ "--delay": "0.3s" } as React.CSSProperties}>

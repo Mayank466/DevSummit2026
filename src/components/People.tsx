@@ -23,20 +23,27 @@ export default function People({ id, title, subtitle, people, titleGlowClass = "
           <p className="people-subtitle">{subtitle}</p>
         </div>
         <div className="people-grid">
-          {people.map((p, i) => (
+          {people.map((p, i) => {
+            const isComingSoon = p.name === 'Coming Soon';
+            return (
             <div key={p.id} className="person-card scroll-animate" style={{ "--delay": `${i * 0.1}s` } as React.CSSProperties}>
               <div className="person-avatar-wrap">
                 <div className="person-avatar">
-                  <div className="avatar-inner"><span className="avatar-placeholder">?</span></div>
+                  <div className="avatar-inner"><span className="avatar-placeholder">{isComingSoon ? 'Coming Soon' : '?'}</span></div>
                   <div className="avatar-scanline"></div>
                 </div>
                 <div className="avatar-glow"></div>
               </div>
-              <h3 className="person-name">{p.name}</h3>
-              <p className="person-role">{p.role}</p>
-              {p.company && <p className="person-company">@ {p.company}</p>}
+              {!isComingSoon && (
+                <>
+                  <h3 className="person-name">{p.name}</h3>
+                  <p className="person-role">{p.role}</p>
+                  {p.company && <p className="person-company">@ {p.company}</p>}
+                </>
+              )}
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

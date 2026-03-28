@@ -2,14 +2,14 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const BOOT_LINES = [
-  { text: "INITIALIZING UPSIDE DOWN PROTOCOL...", delay: 100 },
-  { text: "BYPASSING HAWKINS FIREWALL", delay: 550 },
-  { text: "SIGNAL DETECTED — FREQ: 18.4 Hz", delay: 950 },
-  { text: "SCANNING SECTOR: JAIPUR, RAJASTHAN", delay: 1300 },
-  { text: "ENCRYPTED CHANNEL: ESTABLISHED", delay: 1650 },
-  { text: "PARTICIPANT COUNT: 2,048 // RISING", delay: 2000 },
-  { text: "UPSIDE DOWN ACCESS: GRANTED", delay: 2400 },
-  { text: "LAUNCHING DEVSUMMIT_2026.exe", delay: 2750 },
+  { text: "INITIALIZING UPSIDE DOWN PROTOCOL...", delay: 60 },
+  { text: "BYPASSING HAWKINS FIREWALL", delay: 280 },
+  { text: "SIGNAL DETECTED — FREQ: 18.4 Hz", delay: 480 },
+  { text: "SCANNING SECTOR: JAIPUR, RAJASTHAN", delay: 680 },
+  { text: "ENCRYPTED CHANNEL: ESTABLISHED", delay: 880 },
+  { text: "PARTICIPANT COUNT: 2,048 // RISING", delay: 1080 },
+  { text: "UPSIDE DOWN ACCESS: GRANTED", delay: 1300 },
+  { text: "LAUNCHING DEVSUMMIT_2026.exe", delay: 1500 },
 ];
 
 const GLITCH_CHARS = "01アイウエオカキクケコ#%@!&*█▓▒░";
@@ -47,11 +47,11 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
     // Progress counter
     let p = 0;
     const progressInterval = setInterval(() => {
-      const increment = Math.floor(Math.random() * 6) + 2;
+      const increment = Math.floor(Math.random() * 8) + 3;
       p = Math.min(p + increment, 100);
       setProgress(p);
       if (p >= 100) clearInterval(progressInterval);
-    }, 60);
+    }, 50);
 
     // Trigger exit
     const exitTimer = setTimeout(() => {
@@ -62,7 +62,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
         // Sync with exit animation duration
         setTimeout(onComplete, 800);
       }
-    }, 4500);
+    }, 2500);
 
     return () => {
       clearInterval(glitchInterval);

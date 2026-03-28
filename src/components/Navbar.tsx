@@ -31,7 +31,11 @@ export default function Navbar() {
       <nav id="navbar" className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="nav-container">
           <a href="#" className="nav-logo">
-            <span className="logo-text">DEVSUMMIT</span>
+            <img 
+              src="/logo-devsummit.png" 
+              alt="DEVSUMMIT 2026" 
+              className="nav-logo-img"
+            />
           </a>
           <div className="nav-links">
             <ul className="nav-menu">

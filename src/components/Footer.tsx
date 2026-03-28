@@ -25,8 +25,8 @@ export default function Footer() {
           <div className="footer-links">
             <a href="#"><img src="/x.png" alt="X (Twitter)" style={{ width: '35px', height: '35px', filter: 'invert(1)' }} /></a>
             <a href="#"><img src="/ln.png" alt="LINKEDIN" style={{ width: '35px', height: '35px', filter: 'invert(1)' }} /></a>
-            <a href="https://www.instagram.com/devsummit2026/"><img src="/ig.png" alt="INSTAGRAM" style={{ width: '35px', height: '35px', filter: 'invert(1)' }} /></a>
-            <a href="https://discord.gg/rmcpwX27MG"><img src="/ds.png" alt="DISCORD" style={{ width: '40px', height: '35px', filter: 'invert(1)' }} /></a>
+            <a href="https://www.instagram.com/devsummit2026/"><img src="/ig.png" alt="INSTAGRAM" style={{ width: '40px', height: '35px', filter: 'invert(1)' }} /></a>
+            <a href="https://discord.gg/rmcpwX27MG"><img src="/ds.png" alt="DISCORD" style={{ width: '45px', height: '35px', filter: 'invert(1)' }} /></a>
           </div>
         </div>
         <div className="footer-copyright">
