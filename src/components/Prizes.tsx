@@ -5,8 +5,10 @@ export default function Prizes() {
     <section id="prizes" className="section prizes-section">
       <div className="section-container">
         <div className="section-header scroll-animate">
-          <h2 className="section-title">PRIZES & <span className="text-primary text-glow">REWARDS</span></h2>
-          <div className="title-bar center"></div>
+          <div className="title-block center">
+            <h2 className="section-title">PRIZES & <span className="text-primary text-glow">REWARDS</span></h2>
+            <div className="title-bar"></div>
+          </div>
         </div>
 
         <div className="prize-main-banner scroll-animate">

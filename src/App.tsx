@@ -65,9 +65,9 @@ export default function Home() {
           <Countdown />
           <Themes />
           <Prizes />
+          <Sponsors />
           <People id="mentors" title="The Masters" subtitle="Gurus who have survived the void" people={mentors} titleGlowClass="primary-glow" />
           <People id="members" title="The Party" subtitle="The architects behind the madness" people={party} titleGlowClass="white-glow" />
-          <Sponsors />
           <FAQ />
         </main>
 

@@ -74,8 +74,10 @@ export default function Themes() {
     <section id="themes" className="section themes-section">
       <div className="section-container">
         <div className="section-header scroll-animate">
-          <h2 className="section-title">CHOOSE YOUR <span className="text-primary text-glow">WEAPON</span></h2>
-          <div className="title-bar center"></div>
+          <div className="title-block center">
+            <h2 className="section-title">CHOOSE YOUR <span className="text-primary text-glow">WEAPON</span></h2>
+            <div className="title-bar"></div>
+          </div>
           <p className="section-subtitle">Six dimensions of technology. Pick a track and dominate the competition.</p>
         </div>
         <div className="themes-grid">

@@ -58,8 +58,10 @@ export default function FAQ() {
       <div className="faq-radial-bg"></div>
       <div className="section-container faq-container">
         <div className="section-header scroll-animate">
-          <h2 className="section-title">CLASSIFIED <span className="text-primary text-glow">INTEL</span></h2>
-          <div className="title-bar center"></div>
+          <div className="title-block center">
+            <h2 className="section-title">CLASSIFIED <span className="text-primary text-glow">INTEL</span></h2>
+            <div className="title-bar"></div>
+          </div>
         </div>
         <div className="faq-list">
           {faqData.map((item, i) => {

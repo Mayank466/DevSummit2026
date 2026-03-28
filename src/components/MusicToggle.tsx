@@ -56,7 +56,13 @@ export default function MusicToggle() {
 
   return (
     <button id="music-toggle" onClick={toggleMusic} title={isPlaying ? "Mute" : "Play music"}>
-      {isPlaying ? "🔊" : "🔇"}
+      <div className="music-toggle-container">
+        <img 
+          src={isPlaying ? "/s on.jpeg" : "/s off.jpeg"} 
+          alt="Music Toggle" 
+          className="music-toggle-icon"
+        />
+      </div>
     </button>
   );
 }

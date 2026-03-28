@@ -18,8 +18,10 @@ export default function People({ id, title, subtitle, people, titleGlowClass = "
     <section id={id} className="section people-section">
       <div className="section-container">
         <div className="people-header scroll-animate">
-          <h2 className="section-title people-title">{title}</h2>
-          <div className={`title-bar ${titleGlowClass}`}></div>
+          <div className="title-block">
+            <h2 className="section-title people-title">{title}</h2>
+            <div className={`title-bar ${titleGlowClass}`}></div>
+          </div>
           <p className="people-subtitle">{subtitle}</p>
         </div>
         <div className="people-grid">

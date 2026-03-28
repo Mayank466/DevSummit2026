@@ -37,6 +37,15 @@ export default function ScrollObserver() {
       // Update CSS variables for global use
       document.documentElement.style.setProperty('--scroll-y', `${currentScrollY}`);
 
+      // Update local scroll for bars and tier lines to ensure they animate regardless of page position
+      document.querySelectorAll('.title-bar, .tier-line').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        // Progress starts when the element enters the bottom of the viewport
+        const progress = Math.max(0, windowHeight - rect.top);
+        (el as HTMLElement).style.setProperty('--local-scroll', `${progress}`);
+      });
+
       animationFrameId = requestAnimationFrame(onScrollLoop);
     };
 

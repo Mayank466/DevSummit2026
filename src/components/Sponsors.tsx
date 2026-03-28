@@ -3,8 +3,10 @@ export default function Sponsors() {
     <section id="sponsors" className="section sponsors-section">
       <div className="section-container sponsors-container">
         <div className="section-header scroll-animate">
-          <h2 className="section-title">THE <span className="text-primary text-glow">BENEFACTORS</span></h2>
-          <div className="title-bar center"></div>
+          <div className="title-block center">
+            <h2 className="section-title">THE <span className="text-primary text-glow">BENEFACTORS</span></h2>
+            <div className="title-bar"></div>
+          </div>
           <p className="section-subtitle">Entities funding our expedition into the unknown.</p>
         </div>
         <div className="sponsors-tiers">

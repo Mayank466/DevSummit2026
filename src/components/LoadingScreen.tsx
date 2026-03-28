@@ -47,11 +47,10 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
     // Progress counter
     let p = 0;
     const progressInterval = setInterval(() => {
-      const increment = Math.floor(Math.random() * 8) + 3;
-      p = Math.min(p + increment, 100);
+      p = Math.min(p + 1, 100);
       setProgress(p);
       if (p >= 100) clearInterval(progressInterval);
-    }, 50);
+    }, 20);
 
     // Trigger exit
     const exitTimer = setTimeout(() => {
