@@ -985,6 +985,14 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 16px;
+  cursor: crosshair;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.prize-main-banner:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px hsla(var(--primary), 0.25), inset 0 0 30px hsla(var(--primary), 0.15);
+  border-color: hsla(var(--primary), 0.4);
 }
 
 .prize-banner-glow {
@@ -993,6 +1001,11 @@ button {
   background: radial-gradient(circle at center, hsla(var(--primary), 0.2), transparent 70%);
   pointer-events: none;
   z-index: 0;
+  transition: opacity 0.4s ease;
+}
+
+.prize-main-banner:hover .prize-banner-glow {
+  opacity: 0.6;
 }
 
 .prize-banner-content {
@@ -1016,6 +1029,15 @@ button {
   color: #fff;
   line-height: 1;
   text-shadow: 0 0 20px hsla(var(--primary), 0.6), 0 0 40px hsla(var(--primary), 0.4);
+  display: inline-block;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center;
+}
+
+.prize-main-banner:hover .prize-amount {
+  transform: scale(1.15) translateY(-5px);
+  color: hsl(var(--primary));
+  text-shadow: 0 0 40px hsla(var(--primary), 0.8), 0 0 80px hsla(var(--primary), 0.6);
 }
 
 .prize-description {

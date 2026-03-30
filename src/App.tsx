@@ -28,6 +28,15 @@ const mentors = [
   { id: 'm6', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
 ];
 
+const judges = [
+  { id: 'j1', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'j2', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'j3', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'j4', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'j5', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'j6', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+];
+
 const party = [
   { id: 't1', name: 'Coming Soon', role: 'Coming Soon' },
   { id: 't2', name: 'Coming Soon', role: 'Coming Soon' },
@@ -71,6 +80,7 @@ export default function Home() {
             <Prizes />
             <Sponsors />
             <People id="mentors" title="The Masters" subtitle="Gurus who have survived the void" people={mentors} titleGlowClass="primary-glow" />
+            <People id="judges" title="The Jury" subtitle="The ones who decide your fate" people={judges} titleGlowClass="primary-glow" />
             <People id="members" title="The Party" subtitle="The architects behind the madness" people={party} titleGlowClass="white-glow" />
             <FAQ />
           </main>

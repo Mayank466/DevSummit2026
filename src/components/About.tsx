@@ -10,8 +10,9 @@ export default function About() {
               <div className="title-bar"></div>
             </div>
             <div className="about-paragraphs">
-              <p>A 24-hour hackathon where the most daring coders enter the Upside Down to build the future. Reality as you know it is just a suggestion.</p>
-              <p>Form your party, gather your supplies, and prepare to face complex challenges across AI, Web3, and beyond. The demogorgons of spaghetti code await. Will you survive the night?</p>
+              <p>Step into the "Upside Down" of innovation at DevSummit 2026, a high-stakes 24-hour hackathon designed for those ready to "HACK UPSIDE DOWN."
+                This isn't just a coding marathon—it’s an immersive challenge to flip your perspective and build the future across AI, Web3, and beyond.</p>
+              <p> Gather your party, prepare your supplies, and get ready to battle demogorgons of spaghetti code in a race against the clock. Reality as you know it is just a suggestion; the question is, will your code survive the night??</p>
             </div>
           </div>
           <div className="stats-grid">
