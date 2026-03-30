@@ -48,10 +48,10 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-cta animate-on-load delay-1">
-          <button className="hero-register-btn group">
+          <a href="https://vision.hack2skill.com/event/devsummit?utm_source=hack2skill&utm_medium=homepage&sectionid=69c7a84ee339f97e64d585e6" target="_blank" rel="noopener noreferrer" className="hero-register-btn group inline-block">
             <div className="btn-fill"></div>
             <span className="btn-text">REGISTER NOW</span>
-          </button>
+          </a>
         </div>
       </div>
       <div className="hero-fade-bottom -z-10"></div>

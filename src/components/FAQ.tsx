@@ -5,11 +5,11 @@ import { useState, useEffect, useRef } from "react";
 const faqData = [
   { q: "Who can participate?", a: "Anyone brave enough. Students, professionals, and entities from parallel dimensions are all welcome. You must be at least 18 years old to enter the portal." },
   { q: "How many members in a party?", a: "Your squad can have 2 to 4 members. Solo adventurers are allowed, but it's dangerous to go alone." },
-  { q: "Is there an entry fee?", a: "No. The Department of Energy covers all costs. Registration, food, and survival gear are completely free." },
+  { q: "Is there an entry fee?", a: "No. The Department of E&T covers all costs. Registration, food, and survival gear are completely free." },
   { q: "What if I don't have a team?", a: "We will have a team-building session before the hackathon begins. You'll find your party there." },
   { q: "What should I bring?", a: "Your rig (laptop), chargers, sleeping bag, personal hygiene items, and a flashlight. We provide the rest." },
   { q: "Are we allowed to use AI?", a: "Yes. Taming synthetic intelligence is highly encouraged. Just don't let it tame you." },
-  { q: "Can we build on past projects?", a: "No. All code must be written during the 48-hour window. Existing libraries and frameworks are fine." },
+  { q: "Can we build on past projects?", a: "No. All code must be written during the 24-hour window. Existing libraries and frameworks are fine." },
   { q: "Where do we sleep?", a: "Designated safe zones will be provided. Sleeping is optional, but hallucinations due to sleep deprivation will not grant you extra points." },
 ];
 
@@ -81,8 +81,8 @@ export default function FAQ() {
                     <polyline points="6 9 12 15 18 9"></polyline>
                   </svg>
                 </button>
-                <div 
-                  className="faq-answer" 
+                <div
+                  className="faq-answer"
                   style={{ maxHeight: isOpen ? "500px" : "0" }}
                 >
                   <div className="faq-answer-inner">{item.a}</div>

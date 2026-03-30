@@ -33,7 +33,7 @@ export default function Sponsors() {
             <div className="sponsor-tier sponsor-tier--half" style={{ "--delay": "0.15s" } as React.CSSProperties}>
               <div className="tier-header">
                 <h3 className="tier-label">
-                  <span className="tier-label-text">OFFICIAL PLATFORM PARTNER</span>
+                  <span className="tier-label-text">OFFICIAL PLATFORM<br />PARTNER</span>
                   <div className="tier-line"></div>
                 </h3>
               </div>

@@ -15,7 +15,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+  const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   useEffect(() => {
@@ -26,58 +26,122 @@ export default function Navbar() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  const navLinks = [
+    { href: "#about", label: "About" },
+    { href: "#themes", label: "Themes" },
+    { href: "#mentors", label: "Mentors" },
+    { href: "#sponsors", label: "Sponsors" },
+    { href: "#faq", label: "FAQ" },
+  ];
+
   return (
     <>
-      <nav id="navbar" className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <nav id="navbar" className={`navbar ${scrolled ? "scrolled" : ""}`} aria-label="Main navigation">
         <div className="nav-container">
           <a href="#" className="nav-logo">
-            <img 
-              src="/logo-devsummit.png" 
-              alt="DEVSUMMIT 2026" 
+            <img
+              src="/logo-devsummit.png"
+              alt="DEVSUMMIT 2026"
               className="nav-logo-img"
               fetchPriority="high"
             />
           </a>
+
+          {/* Desktop links */}
           <div className="nav-links">
             <ul className="nav-menu">
-              <li><a href="#about" className="nav-link">About</a></li>
-              <li><a href="#themes" className="nav-link">Themes</a></li>
-              <li><a href="#mentors" className="nav-link">Mentors</a></li>
-              <li><a href="#sponsors" className="nav-link">Sponsors</a></li>
-              <li><a href="#faq" className="nav-link">FAQ</a></li>
+              {navLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <a href={href} className="nav-link">{label}</a>
+                </li>
+              ))}
             </ul>
+            <a href="https://vision.hack2skill.com/event/devsummit?utm_source=hack2skill&utm_medium=homepage&sectionid=69c7a84ee339f97e64d585e6" target="_blank" rel="noopener noreferrer" className="nav-register ml-4">REGISTER NOW</a>
           </div>
-          <button className="mobile-toggle" onClick={toggleMobileMenu}>
-            {!mobileMenuOpen ? (
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" id="menuIcon">
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
-            ) : (
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" id="closeIcon">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            )}
+
+          {/* Morphing Hamburger */}
+          <button
+            className={`mobile-toggle${mobileMenuOpen ? " is-open" : ""}`}
+            onClick={toggleMobileMenu}
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            id="hamburgerBtn"
+          >
+            <span className="hamburger-bar bar-top" />
+            <span className="hamburger-bar bar-mid" />
+            <span className="hamburger-bar bar-bot" />
           </button>
         </div>
       </nav>
 
-      <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`} id="mobileMenu">
-        <ul className="mobile-menu-list">
-          <li><a href="#about" onClick={closeMobileMenu}>About</a></li>
-          <li><a href="#themes" onClick={closeMobileMenu}>Themes</a></li>
-          <li><a href="#mentors" onClick={closeMobileMenu}>Mentors</a></li>
-          <li><a href="#sponsors" onClick={closeMobileMenu}>Sponsors</a></li>
-          <li><a href="#faq" onClick={closeMobileMenu}>FAQ</a></li>
-          <li className="mobile-register-li">
-            <a href="#" className="mobile-register-btn">
-              REGISTER NOW
-            </a>
-          </li>
-        </ul>
-      </div>
+      {/* Dim backdrop — tap to close */}
+      <div
+        className={`mobile-backdrop${mobileMenuOpen ? " visible" : ""}`}
+        onClick={closeMobileMenu}
+        aria-hidden="true"
+      />
+
+      {/* Right-side Drawer */}
+      <aside
+        className={`mobile-drawer${mobileMenuOpen ? " open" : ""}`}
+        id="mobileMenu"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+      >
+        {/* Decorative overlays */}
+        <div className="drawer-scanlines" aria-hidden="true" />
+        <div className="drawer-red-glow" aria-hidden="true" />
+
+        {/* Header label */}
+        <div className="drawer-header">
+          <div className="drawer-header-line" />
+        </div>
+
+        {/* Nav links */}
+        <nav aria-label="Mobile navigation">
+          <ul className="drawer-nav-list">
+            {navLinks.map(({ href, label }, i) => (
+              <li
+                key={href}
+                className="drawer-nav-item"
+                style={{ "--i": i } as React.CSSProperties}
+              >
+                <a href={href} className="drawer-nav-link" onClick={closeMobileMenu}>
+                  <span className="drawer-nav-label">{label}</span>
+                  <span className="drawer-nav-arrow">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* CTA button */}
+        <div className="drawer-cta">
+          <a href="https://vision.hack2skill.com/event/devsummit?utm_source=hack2skill&utm_medium=homepage&sectionid=69c7a84ee339f97e64d585e6" target="_blank" rel="noopener noreferrer" className="drawer-register-btn" onClick={closeMobileMenu}>
+            <span className="drawer-btn-glow" />
+            <span className="drawer-btn-text">REGISTER NOW</span>
+          </a>
+        </div>
+
+        {/* Branding at bottom */}
+        <div className="drawer-footer-brand">
+          <span className="drawer-brand-name">DEVSUMMIT <span>2026</span></span>
+          <span className="drawer-brand-tagline">HACK UPSIDE DOWN</span>
+        </div>
+      </aside>
     </>
   );
 }

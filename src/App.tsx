@@ -38,12 +38,12 @@ const judges = [
 ];
 
 const party = [
-  { id: 't1', name: 'Coming Soon', role: 'Coming Soon' },
-  { id: 't2', name: 'Coming Soon', role: 'Coming Soon' },
-  { id: 't3', name: 'Coming Soon', role: 'Coming Soon' },
-  { id: 't4', name: 'Coming Soon', role: 'Coming Soon' },
-  { id: 't5', name: 'Coming Soon', role: 'Coming Soon' },
-  { id: 't6', name: 'Coming Soon', role: 'Coming Soon' },
+  { id: 't1', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
+  { id: 't3', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
+  { id: 't4', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
+  { id: 't5', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
+  { id: 't6', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
+  { id: 't2', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
 ];
 
 export default function Home() {
