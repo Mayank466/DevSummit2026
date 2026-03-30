@@ -389,7 +389,7 @@ button {
   transform: scale(1.05);
 }
 
-  /* Removed deprecated logo-text style */
+/* Removed deprecated logo-text style */
 
 .nav-links {
   display: none;
@@ -812,6 +812,7 @@ button {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.125rem;
   line-height: 1.625;
+  transition: 0.3s;
 }
 
 .stats-grid {
@@ -1837,16 +1838,16 @@ button {
 .timeline-rift {
   position: absolute;
   left: 1.125rem;
-  top: 1.5rem;     /* Start below top of group so there's a gap */
-  bottom: 1.5rem;  /* End above bottom of group so there's a gap */
+  top: 1.5rem;
+  /* Start below top of group so there's a gap */
+  bottom: 1.5rem;
+  /* End above bottom of group so there's a gap */
   width: 3px;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    hsl(var(--primary)) 8%,
-    hsl(var(--primary)) 92%,
-    transparent 100%
-  );
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      hsl(var(--primary)) 8%,
+      hsl(var(--primary)) 92%,
+      transparent 100%);
   box-shadow: 0 0 10px hsla(var(--primary), 0.5), 0 0 3px hsla(var(--primary), 0.8);
   z-index: 1;
   transform: translateX(-50%);
@@ -1854,7 +1855,8 @@ button {
 }
 
 .timeline-day-group {
-  margin-bottom: 5rem;  /* Gap between Day 1 / Night / Day 2 segments */
+  margin-bottom: 5rem;
+  /* Gap between Day 1 / Night / Day 2 segments */
   position: relative;
   z-index: 2;
 }
@@ -1897,7 +1899,8 @@ button {
   border: 2px solid hsl(var(--primary));
   border-radius: 50%;
   position: absolute;
-  left: -1.875rem; /* Centered in mobile */
+  left: -1.875rem;
+  /* Centered in mobile */
   top: 0.4rem;
   box-shadow: 0 0 15px hsl(var(--primary));
   z-index: 10;
@@ -1907,7 +1910,8 @@ button {
 .timeline-item {
   display: flex;
   width: 100%;
-  margin-bottom: 0.75rem; /* Reduced padding between items */
+  margin-bottom: 0.75rem;
+  /* Reduced padding between items */
   position: relative;
   padding-left: 3.5rem;
 }
@@ -2006,8 +2010,8 @@ button {
 .scroll-animate {
   opacity: 0;
   transform: translateY(40px) scale(0.9);
-  transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), 
-              transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
   transition-delay: var(--delay, 0s);
   will-change: opacity, transform;
 }
@@ -2067,7 +2071,8 @@ button {
     left: auto;
     top: auto;
     margin-top: 1.5rem;
-    transform: none; /* Already centered by relative + container alignment */
+    transform: none;
+    /* Already centered by relative + container alignment */
   }
 
   .timeline-item {
