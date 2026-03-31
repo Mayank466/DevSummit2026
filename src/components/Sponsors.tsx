@@ -25,7 +25,10 @@ export default function Sponsors() {
                 </h3>
               </div>
               <div className="sponsor-logos">
-                <div className="sponsor-logo sponsor-lg"><span>Coming Soon</span></div>
+                <div className="sponsor-item">
+                  <div className="sponsor-logo sponsor-lg"><span>Coming Soon</span></div>
+                  <p className="sponsor-desc"></p>
+                </div>
               </div>
             </div>
 
@@ -38,8 +41,11 @@ export default function Sponsors() {
                 </h3>
               </div>
               <div className="sponsor-logos">
-                <div className="sponsor-logo sponsor-lg sponsor-logo--image">
-                  <img src="/h2s.png" alt="H2S Media" className="sponsor-img" loading="lazy" />
+                <div className="sponsor-item">
+                  <div className="sponsor-logo sponsor-lg sponsor-logo--image">
+                    <img src="/h2s.png" alt="H2S Media" className="sponsor-img" loading="lazy" />
+                  </div>
+                  <p className="sponsor-desc">Premium platform provider</p>
                 </div>
               </div>
             </div>
@@ -53,42 +59,66 @@ export default function Sponsors() {
                 </h3>
               </div>
               <div className="sponsor-logos">
-                <div className="sponsor-logo sponsor-lg sponsor-logo--image" style={{ padding: '1.5rem' }}>
-                  <img src="/prabony.png" alt="Prabony" className="sponsor-img" style={{ objectFit: 'contain' }} loading="lazy" />
+                <div className="sponsor-item">
+                  <div className="sponsor-logo sponsor-lg sponsor-logo--image" style={{ padding: '1.5rem' }}>
+                    <img src="/prabony.png" alt="Prabony" className="sponsor-img" style={{ objectFit: 'contain' }} loading="lazy" />
+                  </div>
+                  <p className="sponsor-desc">Powering the infrastructure</p>
                 </div>
               </div>
             </div>
 
           </div>
 
-          {/* Gold Sponsors */}
+          {/* Sponsors */}
           <div className="sponsor-tier scroll-animate" style={{ "--delay": "0.2s" } as React.CSSProperties}>
             <div className="tier-header">
               <h3 className="tier-label">
-                <span className="tier-label-text">GOLD SPONSORS</span>
+                <span className="tier-label-text">SPONSORS</span>
                 <div className="tier-line"></div>
               </h3>
             </div>
             <div className="sponsor-logos">
-              <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>
-              <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>
-              <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>
+              <div className="sponsor-item">
+                <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>
+                <p className="sponsor-desc"></p>
+              </div>
+              <div className="sponsor-item">
+                <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>
+                <p className="sponsor-desc"></p>
+              </div>
+              <div className="sponsor-item">
+                <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>
+                <p className="sponsor-desc"></p>
+              </div>
             </div>
           </div>
 
-          {/* Community Partners */}
+          {/* Partners */}
           <div className="sponsor-tier scroll-animate" style={{ "--delay": "0.4s" } as React.CSSProperties}>
             <div className="tier-header">
               <h3 className="tier-label">
-                <span className="tier-label-text">COMMUNITY PARTNERS</span>
+                <span className="tier-label-text">PARTNERS</span>
                 <div className="tier-line"></div>
               </h3>
             </div>
             <div className="sponsor-logos">
-              <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
-              <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
-              <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
-              <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
+              <div className="sponsor-item">
+                <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
+                <p className="sponsor-desc"></p>
+              </div>
+              <div className="sponsor-item">
+                <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
+                <p className="sponsor-desc"></p>
+              </div>
+              <div className="sponsor-item">
+                <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
+                <p className="sponsor-desc"></p>
+              </div>
+              <div className="sponsor-item">
+                <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
+                <p className="sponsor-desc"></p>
+              </div>
             </div>
           </div>
 
