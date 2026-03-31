@@ -25,14 +25,14 @@ export default function People({ id, title, subtitle, people, titleGlowClass = "
           </div>
           <p className="people-subtitle">{subtitle}</p>
         </div>
-        <div className="people-marquee-wrapper">
+        <div className="people-marquee-wrapper scroll-animate">
           <div className="people-marquee-track">
             {/* Original Set */}
             <div className="people-marquee-content">
               {people.map((p, i) => {
                 const isComingSoon = p.name === 'Coming Soon';
                 return (
-                <div key={p.id} className="person-card scroll-animate" style={{ "--delay": `${i * 0.1}s` } as React.CSSProperties}>
+                <div key={p.id} className="person-card">
                   <div className="person-avatar-wrap">
                     <div className="person-avatar">
                       {p.imageUrl ? (
@@ -60,7 +60,7 @@ export default function People({ id, title, subtitle, people, titleGlowClass = "
               {people.map((p, i) => {
                 const isComingSoon = p.name === 'Coming Soon';
                 return (
-                <div key={`${p.id}-clone`} className="person-card scroll-animate" style={{ "--delay": `${i * 0.1}s` } as React.CSSProperties}>
+                <div key={`${p.id}-clone`} className="person-card" aria-hidden="true">
                   <div className="person-avatar-wrap">
                     <div className="person-avatar">
                       {p.imageUrl ? (

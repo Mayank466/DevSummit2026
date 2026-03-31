@@ -20,21 +20,21 @@ const Footer = lazy(() => import("@/components/Footer"));
 const ScrollObserver = lazy(() => import("@/components/ScrollObserver"));
 
 const mentors = [
-  { id: 'm1', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'm2', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'm3', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'm4', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'm5', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'm6', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'm1', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'm2', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'm3', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'm4', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'm5', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'm6', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
 ];
 
 const judges = [
-  { id: 'j1', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'j2', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'j3', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'j4', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'j5', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
-  { id: 'j6', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon' },
+  { id: 'j1', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'j2', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'j3', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'j4', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'j5', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
+  { id: 'j6', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },
 ];
 
 const party = [

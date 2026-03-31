@@ -1444,11 +1444,10 @@ button {
 
 .people-marquee-track {
   display: flex;
-  width: fit-content;
-  animation: scroll-marquee 40s linear infinite;
+  width: max-content;
 }
 
-.people-marquee-track:hover {
+.people-marquee-track:hover .people-marquee-content {
   animation-play-state: paused;
 }
 
@@ -1457,11 +1456,17 @@ button {
   gap: 3rem;
   padding-right: 3rem;
   flex-shrink: 0;
+  animation: scroll-marquee 30s linear infinite;
 }
 
 @keyframes scroll-marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .person-card {
@@ -3164,9 +3169,23 @@ button {
   }
 
   @keyframes mobile-tagline-pulse {
-    0% { transform: scaleX(0.7); opacity: 0.5; box-shadow: 0 0 5px hsl(var(--primary)); }
-    50% { transform: scaleX(1.2); opacity: 1; box-shadow: 0 0 18px hsl(var(--primary)); }
-    100% { transform: scaleX(0.7); opacity: 0.5; box-shadow: 0 0 5px hsl(var(--primary)); }
+    0% {
+      transform: scaleX(0.7);
+      opacity: 0.5;
+      box-shadow: 0 0 5px hsl(var(--primary));
+    }
+
+    50% {
+      transform: scaleX(1.2);
+      opacity: 1;
+      box-shadow: 0 0 18px hsl(var(--primary));
+    }
+
+    100% {
+      transform: scaleX(0.7);
+      opacity: 0.5;
+      box-shadow: 0 0 5px hsl(var(--primary));
+    }
   }
 
   .tagline-text {
