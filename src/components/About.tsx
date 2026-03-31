@@ -18,7 +18,7 @@ export default function About() {
           <div className="stats-grid">
             <div className="stat-card scroll-animate" style={{ "--delay": "0s" } as React.CSSProperties}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-              <span className="stat-value">400+</span>
+              <span className="stat-value">200+</span>
               <span className="stat-label">Hackers</span>
             </div>
             <div className="stat-card scroll-animate" style={{ "--delay": "0.1s" } as React.CSSProperties}>
