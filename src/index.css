@@ -3417,6 +3417,11 @@ button {
     padding: 0.6rem 1.25rem;
   }
 
+  .hero-fade-bottom {
+    height: 15rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
+  }
+
   .btn-text {
     font-size: 0.8rem;
   }

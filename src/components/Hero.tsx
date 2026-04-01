@@ -14,9 +14,9 @@ export default function Hero() {
         filter: 'blur(4px)',
         opacity: 1,
         transform: 'scale(1.05)',
-        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 55%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
         WebkitMaskComposite: 'destination-in',
-        maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 55%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+        maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 75%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
         maskComposite: 'intersect',
       }}>
         {/* Hidden img for fetch priority */}

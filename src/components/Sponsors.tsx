@@ -60,7 +60,7 @@ export default function Sponsors() {
               </div>
               <div className="sponsor-logos">
                 <div className="sponsor-item">
-                  <div className="sponsor-logo sponsor-lg sponsor-logo--image" style={{ padding: '1.5rem' }}>
+                  <div className="sponsor-logo sponsor-md sponsor-logo--image" style={{ padding: '1rem' }}>
                     <img src="/sponsor/prabony.png" alt="Prabony" className="sponsor-img" style={{ objectFit: 'contain' }} loading="lazy" />
                   </div>
                 </div>

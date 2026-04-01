@@ -51,7 +51,7 @@ const party = [
   { id: 't10', name: 'Priyanshu Kumar', role: 'Marketing & Outreach', imageUrl: '' },
   { id: 't11', name: 'Ashish', role: 'Marketing & Outreach', imageUrl: '' },
   { id: 't12', name: 'Milan Singh', role: 'Marketing & Outreach', imageUrl: '' },
-  { id: 't13', name: 'Deepika Kumari', role: 'Marketing & Outreach', imageUrl: '' },
+  { id: 't13', name: 'Deepika Kumari', role: 'Decoration Head', imageUrl: '' },
 ];
 const programChair = {
   id: 'pc1',
