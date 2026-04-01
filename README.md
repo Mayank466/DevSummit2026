@@ -17,10 +17,6 @@ Once you have the code on the new system, just run these two commands in the pro
 # 1. Install all required modules at once
 npm install
 
-Note:
-npn install @tailwindcss/postcss
-(if only 34 modules are installed only)
-
 
 # 2. Start the development server
 nnpm run dev
