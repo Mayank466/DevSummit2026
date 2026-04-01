@@ -52,8 +52,8 @@ export default function Navbar() {
         <div className="nav-container">
           <a href="#" className="nav-logo">
             <img
-              src="/logo-devsummit.png"
-              alt="DEVSUMMIT 2026"
+              src="/top-logo.png"
+              alt="Jagannath University"
               className="nav-logo-img"
               fetchPriority="high"
             />

@@ -13,12 +13,14 @@ export default function MusicToggle() {
     audio.volume = 0.65;
     audioRef.current = audio;
 
+    let startOnce: () => void;
+
     // Try autoplay immediately
     audio.play().then(() => {
       setIsPlaying(true);
     }).catch(() => {
       // Browser blocked — start on first interaction anywhere ONCE
-      const startOnce = () => {
+      startOnce = () => {
         if (!userToggledOffRef.current && audioRef.current) {
           audioRef.current.play().then(() => setIsPlaying(true));
         }
@@ -33,6 +35,11 @@ export default function MusicToggle() {
     });
 
     return () => {
+      if (startOnce) {
+        document.removeEventListener("click", startOnce, true);
+        document.removeEventListener("keydown", startOnce, true);
+        document.removeEventListener("touchstart", startOnce, true);
+      }
       audio.pause();
       audioRef.current = null;
     };
@@ -58,7 +65,7 @@ export default function MusicToggle() {
     <button id="music-toggle" onClick={toggleMusic} title={isPlaying ? "Mute" : "Play music"}>
       <div className="music-toggle-container">
         <img
-          src={isPlaying ? "/s on.jpeg" : "/s off.jpeg"}
+          src={isPlaying ? "/s-on.png" : "/s-off.png"}
           alt="Music Toggle"
           className="music-toggle-icon"
         />

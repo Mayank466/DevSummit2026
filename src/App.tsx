@@ -15,6 +15,7 @@ const Timeline = lazy(() => import("@/components/Timeline"));
 const Prizes = lazy(() => import("@/components/Prizes"));
 const People = lazy(() => import("@/components/People"));
 const Sponsors = lazy(() => import("@/components/Sponsors"));
+const Faculty = lazy(() => import("@/components/Faculty"));
 const FAQ = lazy(() => import("@/components/FAQ"));
 const Footer = lazy(() => import("@/components/Footer"));
 const ScrollObserver = lazy(() => import("@/components/ScrollObserver"));
@@ -38,12 +39,32 @@ const judges = [
 ];
 
 const party = [
-  { id: 't1', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
-  { id: 't3', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
-  { id: 't4', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
-  { id: 't5', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
-  { id: 't6', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
-  { id: 't2', name: 'Coming Soon', role: 'Coming Soon', imageUrl: '' },
+  { id: 't1', name: 'Yogesh Khandelwal', role: 'Lead', imageUrl: '' },
+  { id: 't2', name: 'Dev Sharan', role: 'Co-Lead', imageUrl: '' },
+  { id: 't3', name: 'Mayank Biswas', role: 'Technical Head', imageUrl: '' },
+  { id: 't4', name: 'Anup', role: 'Technical Head', imageUrl: '' },
+  { id: 't5', name: 'Jaydeep', role: 'Treasurer', imageUrl: '' },
+  { id: 't6', name: 'Abhinay Yadav', role: 'Operation Head', imageUrl: '' },
+  { id: 't7', name: 'Rehan Kumar Singh', role: 'Logistics Head', imageUrl: '' },
+  { id: 't8', name: 'Mihir Bairwa', role: 'Social Media Head', imageUrl: '' },
+  { id: 't9', name: 'Ayush', role: 'Social Media Head', imageUrl: '' },
+  { id: 't10', name: 'Priyanshu Kumar', role: 'Marketing & Outreach', imageUrl: '' },
+  { id: 't11', name: 'Ashish', role: 'Marketing & Outreach', imageUrl: '' },
+  { id: 't12', name: 'Milan Singh', role: 'Marketing & Outreach', imageUrl: '' },
+  { id: 't13', name: 'Deepika Kumari', role: 'Marketing & Outreach', imageUrl: '' },
+];
+const programChair = {
+  id: 'pc1',
+  name: "Prof. Dr. Om Prakash Sharma",
+  description: "PVC, Jagan Nath University, Jaipur\n" + "Dean, Faculty of Engineering and Technology",
+  imageUrl: ""
+};
+
+const conveyners = [
+  { id: 'c1', name: "Dr. Renu Bagoria", description: "Assistant Professor", imageUrl: "" },
+  { id: 'c2', name: "Dr. Rahul Misra", description: "Assistant Professor", imageUrl: "" },
+  { id: 'c3', name: "Dr. Rishi Kumar Sharma", description: "Assistant Professor", imageUrl: "" },
+  { id: 'c4', name: "Mr. Raghu Nandan Singh Hada", description: "Assistant Professor", imageUrl: "" },
 ];
 
 export default function Home() {
@@ -79,6 +100,7 @@ export default function Home() {
             <Timeline />
             <Prizes />
             <Sponsors />
+            <Faculty programChair={programChair} conveyners={conveyners} />
             <People id="mentors" title="The Masters" subtitle="Gurus who have survived the void" people={mentors} titleGlowClass="primary-glow" />
             <People id="judges" title="The Jury" subtitle="The ones who decide your fate" people={judges} titleGlowClass="primary-glow" />
             <People id="members" title="The Party" subtitle="The architects behind the madness" people={party} titleGlowClass="white-glow" />

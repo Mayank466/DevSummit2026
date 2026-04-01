@@ -24,13 +24,14 @@ export default function Footer() {
           </div>
           <div className="footer-links">
             <a href="https://x.com/Devsummit2026?s=20"><img src="/x.png" alt="X (Twitter)" style={{ width: '35px', height: '35px', filter: 'invert(1)' }} loading="lazy" /></a>
-            <a href="#"><img src="/ln.png" alt="LINKEDIN" style={{ width: '35px', height: '35px', filter: 'invert(1)' }} loading="lazy" /></a>
+            <a href="https://www.linkedin.com/company/devsummit-2026/"><img src="/ln.png" alt="LINKEDIN" style={{ width: '35px', height: '35px', filter: 'invert(1)' }} loading="lazy" /></a>
             <a href="https://www.instagram.com/devsummit2026/"><img src="/ig.png" alt="INSTAGRAM" style={{ width: '40px', height: '35px', filter: 'invert(1)' }} loading="lazy" /></a>
             <a href="https://discord.gg/rmcpwX27MG"><img src="/ds.png" alt="DISCORD" style={{ width: '45px', height: '35px', filter: 'invert(1)' }} loading="lazy" /></a>
           </div>
         </div>
         <div className="footer-copyright">
           <p>© 2026 DevSummit. All rights reserved.</p>
+          <p>Made with ❤️ by DevSummit 2026 Team</p>
         </div>
       </div>
     </footer>

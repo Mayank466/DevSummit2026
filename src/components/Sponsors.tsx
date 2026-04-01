@@ -43,7 +43,7 @@ export default function Sponsors() {
               <div className="sponsor-logos">
                 <div className="sponsor-item">
                   <div className="sponsor-logo sponsor-lg sponsor-logo--image">
-                    <img src="/h2s.png" alt="H2S Media" className="sponsor-img" loading="lazy" />
+                    <img src="/sponsor/h2s.png" alt="H2S Media" className="sponsor-img" loading="lazy" />
                   </div>
                   <p className="sponsor-desc">Premium platform provider</p>
                 </div>
@@ -61,9 +61,8 @@ export default function Sponsors() {
               <div className="sponsor-logos">
                 <div className="sponsor-item">
                   <div className="sponsor-logo sponsor-lg sponsor-logo--image" style={{ padding: '1.5rem' }}>
-                    <img src="/prabony.png" alt="Prabony" className="sponsor-img" style={{ objectFit: 'contain' }} loading="lazy" />
+                    <img src="/sponsor/prabony.png" alt="Prabony" className="sponsor-img" style={{ objectFit: 'contain' }} loading="lazy" />
                   </div>
-                  <p className="sponsor-desc">Powering the infrastructure</p>
                 </div>
               </div>
             </div>
@@ -80,8 +79,10 @@ export default function Sponsors() {
             </div>
             <div className="sponsor-logos">
               <div className="sponsor-item">
-                <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>
-                <p className="sponsor-desc"></p>
+                <div className="sponsor-logo sponsor-md">
+                  <img src="/sponsor/xyz.png" alt="xyz" className="sponsor-img" loading="lazy" />
+                </div>
+                <p className="sponsor-desc">Domain Sponsor</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>

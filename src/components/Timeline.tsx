@@ -33,7 +33,7 @@ const timelineData: TimelineDay[] = [
       { time: "04:00 - 05:00", title: "Mentoring Session 2", side: "left" },
       { time: "05:00 - 06:00", title: "Session 2", side: "right" },
       { time: "06:00 - 08:30", title: "First Assessment Round", side: "left" },
-      { time: "08:30 - 09:30", title: "Dinner", side: "right" },
+      { time: "08:30 - 10:00", title: "Dinner", side: "right" },
     ]
   },
   {
