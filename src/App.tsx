@@ -46,7 +46,7 @@ const party = [
   { id: 't5', name: 'Jaydeep', role: 'Treasurer', imageUrl: '' },
   { id: 't6', name: 'Abhinay Yadav', role: 'Operation Head', imageUrl: '' },
   { id: 't7', name: 'Rehan Kumar Singh', role: 'Logistics Head', imageUrl: '' },
-  { id: 't8', name: 'Mihir Bairwa', role: 'Social Media Head', imageUrl: '' },
+  { id: 't8', name: 'Mihir', role: 'Social Media Head', imageUrl: '' },
   { id: 't9', name: 'Ayush', role: 'Social Media Head', imageUrl: '' },
   { id: 't10', name: 'Priyanshu Kumar', role: 'Marketing & Outreach', imageUrl: '' },
   { id: 't11', name: 'Ashish', role: 'Marketing & Outreach', imageUrl: '' },
