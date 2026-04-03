@@ -62,7 +62,7 @@ const programChair = {
 
 const conveyners = [
   { id: 'c1', name: "Dr. Renu Bagoria", description: "Assistant Professor", imageUrl: "/people/renu.png" },
-  { id: 'c2', name: "Dr. Rahul Misra", description: "Assistant Professor", imageUrl: "" },
+  { id: 'c2', name: "Dr. Rahul Misra", description: "Assistant Professor", imageUrl: "/people/rahul.png" },
   { id: 'c3', name: "Dr. Rishi Kumar Sharma", description: "Assistant Professor", imageUrl: "/people/rishi.png" },
   { id: 'c4', name: "Mr. Raghu Nandan Singh Hada", description: "Assistant Professor", imageUrl: "/people/raghu.png" },
 ];

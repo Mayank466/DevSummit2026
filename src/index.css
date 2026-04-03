@@ -3261,9 +3261,373 @@ button {
   }
 }
 
-/* ===== Mobile Responsiveness Fixes ===== */
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE DESIGN SYSTEM
+   Breakpoints:
+   - 1440px+ : Ultra-wide desktop
+   - 1280px  : Large desktop
+   - 1024px  : (already handled above — desktop)
+   - 768px   : (already handled above — tablet landscape / desktop transition)
+   - 640px   : Tablet portrait / large phone landscape
+   - 480px   : Standard mobile
+   - 360px   : Small mobile
+   - <360px  : Ultra-narrow (Galaxy Fold, etc.)
+   ========================================================================== */
 
-@media (max-width: 640px) {
+/* ===== Ultra-wide Desktop (1440px+) ===== */
+@media (min-width: 1440px) {
+  .section-container {
+    max-width: 88rem;
+  }
+
+  .nav-container {
+    max-width: 88rem;
+  }
+
+  .footer-container {
+    max-width: 88rem;
+  }
+
+  .hero-content {
+    max-width: 72rem;
+  }
+
+  .timeline-container {
+    max-width: 72rem;
+  }
+
+  .faq-container {
+    max-width: 54rem;
+  }
+}
+
+/* ===== Large Desktop (1280px+) ===== */
+@media (min-width: 1280px) {
+  .section {
+    padding: 8rem 0;
+  }
+
+  .countdown-unit {
+    padding: 0 3.5rem;
+  }
+
+  .countdown-num {
+    font-size: 4rem;
+  }
+
+  .prize-amount {
+    font-size: 5rem;
+  }
+
+  .faculty-col-left {
+    flex: 0.7;
+  }
+
+  .faculty-col-right {
+    flex: 1.6;
+  }
+
+  .sponsor-logos {
+    gap: 2.5rem;
+  }
+}
+
+/* ===== Tablet Landscape / Small Desktop (768px–1024px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    padding: 5rem 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 3.75rem;
+  }
+
+  .hero-year {
+    font-size: 2.75rem;
+  }
+
+  .hero-logo {
+    max-width: 32rem;
+  }
+
+  .tagline-text {
+    font-size: 1.5rem;
+  }
+
+  /* Timeline: keep 2-col but reduce sizes */
+  .timeline-container {
+    max-width: 48rem;
+  }
+
+  .timeline-content {
+    max-width: 22rem;
+  }
+
+  .timeline-day-title {
+    font-size: 1.75rem;
+  }
+
+  /* Faculty: stack on tablet to avoid cramping */
+  .faculty-layout {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .faculty-col-left,
+  .faculty-col-right {
+    flex: 1;
+  }
+
+  .faculty-conveyners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Countdown */
+  .countdown-unit {
+    padding: 0 1.75rem;
+  }
+
+  .countdown-num {
+    font-size: 2.75rem;
+  }
+
+  /* Prizes */
+  .prize-amount {
+    font-size: 3.5rem;
+  }
+
+  .prizes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Sponsors */
+  .sponsor-top-row {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .sponsor-logo.sponsor-lg {
+    height: 5rem;
+  }
+
+  /* People title */
+  .people-title {
+    font-size: 2.5rem;
+  }
+
+  /* About */
+  .about-paragraphs {
+    font-size: 1rem;
+  }
+
+  /* Stats */
+  .stat-value {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===== Tablet Portrait / Large Phones in Landscape (640px–767px) ===== */
+@media (min-width: 640px) and (max-width: 767px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-container {
+    padding: 0 1.25rem;
+  }
+
+  .section-title,
+  .people-title {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-year {
+    font-size: 2.25rem;
+  }
+
+  .hero-logo {
+    max-width: 22rem;
+  }
+
+  .tagline-text {
+    font-size: 1.15rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-register-btn {
+    padding: 0.85rem 2rem;
+  }
+
+  .btn-text {
+    font-size: 1.1rem;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-paragraphs {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  /* Countdown */
+  .countdown-combined-box {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.25rem 2rem;
+    text-align: center;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+
+  .countdown-bar {
+    padding: 1.5rem 0;
+  }
+
+  .countdown-unit {
+    padding: 0 1.5rem;
+  }
+
+  .countdown-num {
+    font-size: 2.5rem;
+  }
+
+  /* Themes */
+  .themes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .theme-card {
+    padding: 1.5rem;
+  }
+
+  /* Timeline — mobile layout */
+  .timeline-rift {
+    left: 1.125rem;
+  }
+
+  .timeline-day-header {
+    align-items: flex-start;
+    margin-left: 3rem;
+  }
+
+  .timeline-day-title {
+    font-size: 1.5rem;
+  }
+
+  .timeline-item {
+    padding-left: 3.5rem;
+  }
+
+  .timeline-node {
+    left: 1rem;
+  }
+
+  .timeline-connector {
+    left: 1rem;
+  }
+
+  .timeline-day-node {
+    position: absolute;
+    left: -1.875rem;
+    top: 0.4rem;
+    transform: translateX(-50%);
+  }
+
+  /* Prizes */
+  .prizes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .prize-amount {
+    font-size: 3rem;
+  }
+
+  /* Faculty */
+  .faculty-layout {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .faculty-conveyners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .faculty-chair-card {
+    padding: 3rem 2rem;
+  }
+
+  .faculty-avatar-wrap-lg {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  /* Sponsors */
+  .sponsor-top-row {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .sponsor-logo.sponsor-lg {
+    height: 4.5rem;
+  }
+
+  /* People */
+  .people-marquee-content {
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .person-card {
+    min-width: 140px;
+  }
+
+  /* Footer */
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-quick-links {
+    align-items: center;
+  }
+}
+
+/* ===== Mobile (481px–639px) ===== */
+@media (max-width: 639px) {
   .sponsor-top-row {
     flex-direction: column;
     gap: 3rem;
@@ -3336,6 +3700,7 @@ button {
   }
 }
 
+/* ===== Standard Mobile (max-width: 480px) ===== */
 @media (max-width: 480px) {
 
   /* Globals */
@@ -3346,9 +3711,7 @@ button {
 
   * {
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
   }
 
   .section {
@@ -3356,7 +3719,7 @@ button {
   }
 
   .section-container {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
   }
 
   .section-title,
@@ -3364,19 +3727,30 @@ button {
     font-size: 1.75rem;
   }
 
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+  }
+
   /* Hero */
+  .hero-section {
+    padding-top: 4rem;
+  }
+
   .hero-logo {
     max-width: 14rem;
   }
 
   .hero-tagline {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     gap: 0.5rem;
-    /* Prevent any scroll-linked growth from overflowing the narrow viewport */
     overflow: visible;
   }
 
-  /* Freeze the side lines at a small fixed width — animate them continuously instead of scroll-linking */
   .tagline-line {
     width: 28px;
     max-width: 28px;
@@ -3409,7 +3783,6 @@ button {
     font-size: 0.85rem;
     padding: 0.4rem 0.75rem;
     letter-spacing: 0.12em;
-    /* Prevent text from wrapping and collapsing the row */
     white-space: nowrap;
   }
 
@@ -3427,6 +3800,16 @@ button {
   }
 
   /* Countdown */
+  .countdown-combined-box {
+    padding: 1.25rem 1rem;
+    gap: 1.25rem;
+    border-radius: 20px;
+  }
+
+  .info-value-small {
+    font-size: 0.8rem;
+  }
+
   .countdown-bar {
     padding: 1rem 0;
     display: grid;
@@ -3453,7 +3836,7 @@ button {
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
   }
 
@@ -3465,6 +3848,10 @@ button {
     font-size: 1.8rem;
   }
 
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
   /* Themes */
   .theme-card {
     padding: 1.5rem;
@@ -3472,6 +3859,10 @@ button {
 
   .theme-title {
     font-size: 1.25rem;
+  }
+
+  .theme-desc {
+    font-size: 0.8rem;
   }
 
   /* Prizes */
@@ -3487,10 +3878,31 @@ button {
     padding: 1.25rem 1rem;
   }
 
+  .prize-description {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .prize-card-title {
+    font-size: 1rem;
+  }
+
+  .prize-card-desc {
+    font-size: 0.85rem;
+  }
+
   /* Timeline */
+  .timeline-section {
+    padding: 3.5rem 0;
+  }
+
   .timeline-day-header {
     margin-left: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .timeline-day-title {
+    font-size: 1.35rem;
   }
 
   .timeline-rift {
@@ -3499,6 +3911,8 @@ button {
 
   .timeline-day-node {
     left: -1rem;
+    width: 1rem;
+    height: 1rem;
   }
 
   .timeline-item {
@@ -3516,6 +3930,14 @@ button {
 
   .timeline-content {
     padding: 1rem;
+  }
+
+  .timeline-event-title {
+    font-size: 1rem;
+  }
+
+  .timeline-event-desc {
+    font-size: 0.75rem;
   }
 
   /* People */
@@ -3538,6 +3960,10 @@ button {
     font-size: 0.95rem;
   }
 
+  .person-role {
+    font-size: 0.7rem;
+  }
+
   /* Sponsors */
   .sponsors-tiers {
     gap: 4rem;
@@ -3557,6 +3983,10 @@ button {
 
   .sponsor-logo span {
     font-size: 1.15rem;
+  }
+
+  .tier-label-text {
+    font-size: 0.75rem;
   }
 
   /* FAQ */
@@ -3581,6 +4011,7 @@ button {
 
   .footer-links {
     justify-content: center;
+    gap: 1rem;
   }
 
   .footer-quick-links {
@@ -3624,5 +4055,684 @@ button {
   .faculty-avatar-wrap-sm {
     width: 6rem;
     height: 6rem;
+  }
+
+  .faculty-name {
+    font-size: 1.1rem;
+  }
+
+  .faculty-desc {
+    font-size: 0.85rem;
+  }
+
+  /* Loading screen HUD */
+  .loading-status-top {
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+    font-size: 0.65rem;
+  }
+
+  .loading-frame {
+    inset: 1rem;
+  }
+
+  .terminal-overlay {
+    bottom: 2rem;
+    left: 2rem;
+    max-width: 220px;
+    font-size: 0.65rem;
+  }
+}
+
+/* ===== Small Mobile (max-width: 360px) ===== */
+@media (max-width: 360px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .section-container {
+    padding: 0 0.75rem;
+  }
+
+  .section-title,
+  .people-title {
+    font-size: 1.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding-top: 3.5rem;
+  }
+
+  .hero-logo {
+    max-width: 11rem;
+  }
+
+  .hero-tagline {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    gap: 0.3rem;
+  }
+
+  .tagline-text {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    letter-spacing: 0.08em;
+  }
+
+  .tagline-line {
+    width: 18px;
+    max-width: 18px;
+  }
+
+  .hero-register-btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-text {
+    font-size: 0.7rem;
+  }
+
+  /* Nav */
+  .nav-container {
+    padding: 0 0.75rem;
+  }
+
+  .nav-logo-img {
+    height: 2.25rem;
+  }
+
+  .mobile-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hamburger-bar {
+    width: 18px;
+  }
+
+  .mobile-drawer {
+    width: min(90vw, 320px);
+    padding: 4rem 1.25rem 1.5rem;
+  }
+
+  .drawer-nav-label {
+    font-size: 1.15rem;
+  }
+
+  /* Countdown */
+  .countdown-combined-box {
+    padding: 1rem 0.75rem;
+    gap: 1rem;
+  }
+
+  .info-value-small {
+    font-size: 0.7rem;
+  }
+
+  .info-label-small {
+    font-size: 0.55rem;
+  }
+
+  .countdown-num {
+    font-size: 1.75rem;
+  }
+
+  .countdown-label {
+    font-size: 8px;
+  }
+
+  .countdown-unit {
+    padding: 0 0.5rem;
+  }
+
+  /* About */
+  .about-paragraphs {
+    font-size: 0.85rem;
+    gap: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .stat-card {
+    padding: 0.75rem;
+  }
+
+  .stat-card svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* Theme cards */
+  .theme-card {
+    padding: 1.25rem;
+  }
+
+  .theme-title {
+    font-size: 1.1rem;
+  }
+
+  .theme-desc {
+    font-size: 0.75rem;
+  }
+
+  .theme-icon-box {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Prizes */
+  .prize-amount {
+    font-size: 1.75rem;
+  }
+
+  .prize-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+  }
+
+  .prize-main-banner {
+    padding: 1rem 0.75rem;
+  }
+
+  .prize-description {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prize-card {
+    padding: 1rem;
+  }
+
+  .prize-card-title {
+    font-size: 0.9rem;
+  }
+
+  .prize-card-desc {
+    font-size: 0.8rem;
+  }
+
+  .prize-icon-box {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  /* Timeline */
+  .timeline-day-header {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-day-title {
+    font-size: 1.15rem;
+  }
+
+  .timeline-day-date {
+    font-size: 0.7rem;
+  }
+
+  .timeline-item {
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-content {
+    padding: 0.75rem;
+  }
+
+  .timeline-event-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-event-desc {
+    font-size: 0.7rem;
+  }
+
+  .timeline-time {
+    font-size: 0.65rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* People */
+  .person-card {
+    min-width: 100px;
+  }
+
+  .person-avatar-wrap {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .person-name {
+    font-size: 0.8rem;
+  }
+
+  .person-role {
+    font-size: 0.6rem;
+  }
+
+  /* Sponsors */
+  .sponsors-tiers {
+    gap: 3rem;
+  }
+
+  .sponsor-logo.sponsor-lg {
+    height: 3.5rem;
+  }
+
+  .sponsor-logo.sponsor-md {
+    height: 2.75rem;
+  }
+
+  .sponsor-logo.sponsor-sm {
+    height: 2rem;
+  }
+
+  .sponsor-logo span {
+    font-size: 0.9rem;
+  }
+
+  .tier-label-text {
+    font-size: 0.65rem;
+  }
+
+  .sponsor-desc {
+    font-size: 0.7rem;
+    max-width: 10rem;
+  }
+
+  /* Faculty */
+  .faculty-sublabel {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .faculty-chair-card {
+    padding: 1.75rem 0.75rem;
+  }
+
+  .faculty-avatar-wrap-lg {
+    width: 6.5rem;
+    height: 6.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .faculty-conveyner-card {
+    padding: 1.5rem 0.75rem;
+    gap: 1rem;
+  }
+
+  .faculty-avatar-wrap-sm {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .faculty-name {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .faculty-desc {
+    font-size: 0.75rem;
+  }
+
+  /* FAQ */
+  .faq-question {
+    padding: 0.85rem 1rem;
+  }
+
+  .faq-question-text {
+    font-size: 0.8rem;
+  }
+
+  .faq-chevron {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .faq-answer-inner {
+    padding: 0 1rem 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  /* Footer */
+  .footer-logo {
+    font-size: 1.15rem;
+  }
+
+  .footer-links a img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .footer-quick-list {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .footer-copyright p {
+    font-size: 0.65rem;
+  }
+
+  /* Music Toggle */
+  #music-toggle {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Loading */
+  .loading-frame {
+    inset: 0.5rem;
+  }
+
+  .loading-status-top {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    font-size: 0.55rem;
+  }
+
+  .terminal-overlay {
+    bottom: 1rem;
+    left: 1rem;
+    max-width: 180px;
+    font-size: 0.55rem;
+  }
+}
+
+/* ===== Ultra-Narrow (Galaxy Fold closed, etc.) ===== */
+@media (max-width: 280px) {
+  .section-container {
+    padding: 0 0.5rem;
+  }
+
+  .hero-logo {
+    max-width: 8rem;
+  }
+
+  .hero-tagline {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .tagline-line {
+    width: 40px;
+    max-width: 40px;
+    height: 1px;
+  }
+
+  .tagline-text {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.4rem;
+  }
+
+  .section-title,
+  .people-title {
+    font-size: 1.15rem;
+  }
+
+  .countdown-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .countdown-num {
+    font-size: 1.5rem;
+  }
+
+  .prize-amount {
+    font-size: 1.4rem;
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  .person-card {
+    min-width: 80px;
+  }
+
+  .person-avatar-wrap {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .person-name {
+    font-size: 0.7rem;
+  }
+
+  .nav-logo-img {
+    height: 1.75rem;
+  }
+
+  .mobile-toggle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hamburger-bar {
+    width: 14px;
+  }
+}
+
+/* ===== Landscape Orientation (short viewport) ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-tagline {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-logo {
+    max-width: 16rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .loading-frame {
+    inset: 0.5rem;
+  }
+
+  #music-toggle {
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ===== iPad-specific adjustments ===== */
+@media (min-width: 768px) and (max-width: 1024px) and (min-height: 1000px) {
+  /* iPad portrait — taller viewport, can use more generous spacing */
+  .section {
+    padding: 6rem 0;
+  }
+
+  .hero-section {
+    min-height: 85vh;
+  }
+
+  .hero-logo {
+    max-width: 28rem;
+  }
+
+  .tagline-text {
+    font-size: 1.5rem;
+  }
+
+  .hero-register-btn {
+    padding: 1rem 2.5rem;
+  }
+
+  .btn-text {
+    font-size: 1.25rem;
+  }
+
+  .countdown-num {
+    font-size: 3rem;
+  }
+
+  .faculty-chair-card {
+    padding: 4rem 2rem;
+  }
+
+  .faculty-avatar-wrap-lg {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+/* ===== Safe area insets for notched phones ===== */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .site-footer {
+    padding-bottom: calc(3rem + env(safe-area-inset-bottom));
+  }
+
+  #music-toggle {
+    bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+
+  .mobile-drawer {
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* ===== Hover optimizations for touch devices ===== */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover-dependent transforms on touch — they cause "stuck" states */
+  .theme-card:hover {
+    transform: none;
+  }
+
+  .prize-card:hover {
+    transform: none;
+  }
+
+  .stat-card:hover svg {
+    transform: none;
+  }
+
+  .faculty-chair-card:hover,
+  .faculty-conveyner-card:hover {
+    transform: none;
+  }
+
+  .timeline-item:hover .timeline-content {
+    transform: none;
+  }
+
+  .timeline-item:hover .timeline-node {
+    transform: translateX(-50%);
+  }
+
+  .prize-main-banner:hover {
+    transform: none;
+  }
+
+  .prize-main-banner:hover .prize-amount {
+    transform: none;
+  }
+
+  /* Make tap targets at least 44px for accessibility */
+  .nav-link {
+    padding: 0.5rem 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .faq-question {
+    min-height: 48px;
+  }
+
+  .drawer-nav-link {
+    min-height: 48px;
+  }
+}
+
+/* ===== Reduced Motion (accessibility) ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .people-marquee-content {
+    animation: none;
+  }
+
+  .hero-logo {
+    animation: none;
+  }
+
+  .stranger-bar {
+    animation: none;
+  }
+
+  .text-3d-lamp {
+    animation: none;
+  }
+
+  .tagline-line {
+    animation: none;
+  }
+}
+
+/* ===== High-resolution displays ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .timeline-rift {
+    width: 2px;
+  }
+
+  .timeline-connector {
+    height: 2px;
+  }
+
+  .title-bar {
+    height: 3px;
   }
 }
