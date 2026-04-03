@@ -40,18 +40,18 @@ const judges = [
 
 const party = [
   { id: 't1', name: 'Yogesh Khandelwal', role: 'Lead', imageUrl: '/people/party/yogesh.png' },
-  { id: 't2', name: 'Dev Sharan', role: 'Co-Lead', imageUrl: '' },
+  { id: 't2', name: 'Dev Sharan', role: 'Co-Lead', imageUrl: '/people/party/devsharan.png' },
   { id: 't3', name: 'Mayank Biswas', role: 'Technical Head', imageUrl: '/people/party/mayank.png' },
-  { id: 't4', name: 'Anup', role: 'Technical Head', imageUrl: '' },
+  { id: 't4', name: 'Anup', role: 'Technical Head', imageUrl: '/people/party/anup.png' },
   { id: 't5', name: 'Jaydeep', role: 'Treasurer', imageUrl: '/people/party/jaydeep.png' },
   { id: 't6', name: 'Abhinay Yadav', role: 'Operation Head', imageUrl: '/people/party/abhinay.png' },
-  { id: 't7', name: 'Rehan Kumar Singh', role: 'Logistics Head', imageUrl: '' },
+  { id: 't7', name: 'Rehan Kumar Singh', role: 'Logistics Head', imageUrl: '/people/party/rehan.png' },
   { id: 't8', name: 'Mihir', role: 'Social Media Head', imageUrl: '/people/party/mihir.png' },
-  { id: 't9', name: 'Ayush', role: 'Social Media Head', imageUrl: '' },
-  { id: 't10', name: 'Priyanshu Kumar', role: 'Marketing & Outreach', imageUrl: '' },
-  { id: 't11', name: 'Ashish', role: 'Marketing & Outreach', imageUrl: '' },
-  { id: 't12', name: 'Milan Singh', role: 'Marketing & Outreach', imageUrl: '' },
-  { id: 't13', name: 'Deepika Kumari', role: 'Decoration Head', imageUrl: '' },
+  { id: 't9', name: 'Ayush', role: 'Social Media Head', imageUrl: '/people/party/ayush.png' },
+  { id: 't10', name: 'Priyanshu Kumar', role: 'Marketing & Outreach', imageUrl: '/people/party/priyanshu.png' },
+  { id: 't11', name: 'Ashish', role: 'Marketing & Outreach', imageUrl: '/people/party/ashish.png' },
+  { id: 't12', name: 'Milan Singh', role: 'Marketing & Outreach', imageUrl: '/people/party/milan.png' },
+  { id: 't13', name: 'Deepika Kumari', role: 'Decoration Head', imageUrl: '/people/party/deepika.png' },
 ];
 const programChair = {
   id: 'pc1',
