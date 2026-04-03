@@ -57,13 +57,13 @@ const programChair = {
   id: 'pc1',
   name: "Prof. Dr. Om Prakash Sharma",
   description: "PVC, Jagan Nath University, Jaipur\n" + "Dean, Faculty of Engineering and Technology",
-  imageUrl: ""
+  imageUrl: "/people/opsharma.png"
 };
 
 const conveyners = [
   { id: 'c1', name: "Dr. Renu Bagoria", description: "Assistant Professor", imageUrl: "" },
   { id: 'c2', name: "Dr. Rahul Misra", description: "Assistant Professor", imageUrl: "" },
-  { id: 'c3', name: "Dr. Rishi Kumar Sharma", description: "Assistant Professor", imageUrl: "" },
+  { id: 'c3', name: "Dr. Rishi Kumar Sharma", description: "Assistant Professor", imageUrl: "/people/rishi.png" },
   { id: 'c4', name: "Mr. Raghu Nandan Singh Hada", description: "Assistant Professor", imageUrl: "" },
 ];
 

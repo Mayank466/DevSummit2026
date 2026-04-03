@@ -17,6 +17,15 @@ interface TimelineDay {
 
 const timelineData: TimelineDay[] = [
   {
+    day: "Pre-Event",
+    date: "March - April 2026",
+    events: [
+      { time: "", title: "Registration Start", description: "28 March, 2026", side: "left" },
+      { time: "", title: "Registraton Close", description: "15 April, 2026", side: "right" },
+      { time: "", title: "Screening Result", description: "25 April, 2026", side: "left" }
+    ]
+  },
+  {
     day: "Day 1",
     date: "1st May 2026",
     events: [
