@@ -386,9 +386,8 @@ h6,
   z-index: 55;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 1rem 0;
-  background: rgba(6, 0, 0, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 2px solid hsla(var(--primary), 0.2);
+  background: transparent;
+  border-bottom: transparent;
   animation: slideDown 0.8s ease-out both;
 }
 
@@ -397,7 +396,7 @@ h6,
 .navbar.scrolled {
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(16px);
-  border-bottom: 2px solid hsl(var(--primary));
+  border-bottom: none;
   padding: 0.6rem 0;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
@@ -433,15 +432,15 @@ h6,
 
 
 .nav-logo-img {
-  height: 2.5rem;
+  height: 3.5rem;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
 }
 
 .nav-logo-img.main-logo {
-  height: 3rem;
+  height: 4rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
 }
 
 
@@ -2302,8 +2301,8 @@ h6,
 }
 
 .footer-copyright {
-  margin-top: 3rem;
-  text-align: center;
+  margin-top: 0.5rem;
+  text-align: left;
 }
 
 .footer-copyright p {
@@ -3305,7 +3304,7 @@ h6,
   grid-template-rows: auto 1fr;
   gap: 0.5rem 1rem;
   width: 100%;
-  max-width: 750px;
+  max-width: 420px;
   align-items: start;
 }
 
@@ -3474,6 +3473,8 @@ h6,
   .footer-links {
     gap: 2rem;
     margin-top: 1rem;
+    justify-content: center;
+    width: 100%;
   }
 
   .footer-social-icon {
