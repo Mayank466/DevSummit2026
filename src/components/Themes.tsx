@@ -1,75 +1,60 @@
-export default function Themes() {
-  const themes = [
-    {
-      title: "Web3 & Blockchain",
-      desc: "Build decentralized networks immune to centralized control.",
-      gradient: "from-red-800",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
+import { themes } from '@/constants/data';
+
+const getIcon = (iconName: string) => {
+  const stroke = "hsl(0, 100%, 45%)";
+  const strokeWidth = "1.5";
+  
+  switch (iconName) {
+    case 'web3':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth={strokeWidth}>
           <rect x="2" y="7" width="20" height="14" rx="2" />
           <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
           <line x1="12" y1="11" x2="12" y2="17" />
           <line x1="9" y1="14" x2="15" y2="14" />
         </svg>
-      )
-    },
-    {
-      title: "Bio Tech",
-      desc: "Push the boundaries of human endurance and biology.",
-      gradient: "from-red-950",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
+      );
+    case 'bio':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth={strokeWidth}>
           <rect x="3" y="11" width="18" height="11" rx="2" />
           <path d="M7 11V7a5 5 0 0 1 10 0v4" />
         </svg>
-      )
-    },
-    {
-      title: "Next Gen AI/ML",
-      desc: "Train models that blur the line between human and synthetic consciousness.",
-      gradient: "from-red-900",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
+      );
+    case 'ai':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth={strokeWidth}>
           <path d="M12 2a4 4 0 0 1 4 4c0 1.95-2 3-2 8h-4c0-5-2-6.05-2-8a4 4 0 0 1 4-4z" />
           <path d="M10 14h4" />
           <path d="M10 18h4" />
           <path d="M11 22h2" />
         </svg>
-      )
-    },
-    {
-      title: "Open Innovation",
-      desc: "No rules. No limits. Build whatever your twisted mind conceives.",
-      gradient: "from-red-800",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
+      );
+    case 'open':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth={strokeWidth}>
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
         </svg>
-      )
-    },
-    {
-      title: "IOT",
-      desc: "Build smart, connected solutions using IoT to solve real-world problems through automation and data.",
-      gradient: "from-red-900",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
+      );
+    case 'iot':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth={strokeWidth}>
           <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
           <circle cx="12" cy="12" r="3" />
         </svg>
-      )
-    },
-    {
-      title: "Green Tech",
-      desc: "Create sustainable solutions using green technology to tackle environmental challenges and promote a cleaner future.",
-      gradient: "from-red-950",
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(0, 100%, 45%)" strokeWidth="1.5">
+      );
+    case 'green':
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth={strokeWidth}>
           <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
         </svg>
-      )
-    }
-  ];
+      );
+    default:
+      return null;
+  }
+};
 
+export default function Themes() {
   return (
     <section id="themes" className="section themes-section">
       <div className="section-container">
@@ -85,7 +70,7 @@ export default function Themes() {
             <div key={i} className="theme-card scroll-animate group" style={{ "--delay": `${i * 0.1}s` } as React.CSSProperties}>
               <div className={`theme-gradient ${theme.gradient}`}></div>
               <div className="theme-content">
-                <div className="theme-icon-box">{theme.icon}</div>
+                <div className="theme-icon-box">{getIcon(theme.iconName)}</div>
                 <h3 className="theme-title">{theme.title}</h3>
                 <p className="theme-desc">{theme.desc}</p>
               </div>

@@ -15,55 +15,7 @@ interface TimelineDay {
   events: TimelineEvent[];
 }
 
-const timelineData: TimelineDay[] = [
-  {
-    day: "Pre-Event",
-    date: "March - April 2026",
-    events: [
-      { time: "", title: "Registration Start", description: "28 March, 2026", side: "left" },
-      { time: "", title: "Registraton Close", description: "15 April, 2026", side: "right" },
-      { time: "", title: "Screening Result", description: "25 April, 2026", side: "left" }
-    ]
-  },
-  {
-    day: "Day 1",
-    date: "1st May 2026",
-    events: [
-      { time: "08:30 - 10:00", title: "Registration Starts", description: "Global registration begins on the official platform", side: "left" },
-      { time: "09:30 - 10:30", title: "Refreshments", side: "right" },
-      { time: "10:00", title: "Inauguration", side: "left" },
-      { time: "10:30", title: "Welcome Address", description: "By Program Chair", side: "right" },
-      { time: "10:30 - 11:00", title: "Speech by Dignitaries", side: "left" },
-      { time: "11:00 - 11:30", title: "Chief Guest Speech", side: "right" },
-      { time: "12:00", title: "Hackathon Start", description: "Let the coding begin!", side: "left" },
-      { time: "01:00 - 02:00", title: "Mentoring Session 1", side: "right" },
-      { time: "02:00 - 03:00", title: "Lunch Break", side: "left" },
-      { time: "03:00 - 04:00", title: "Session 1", side: "right" },
-      { time: "04:00 - 05:00", title: "Mentoring Session 2", side: "left" },
-      { time: "05:00 - 06:00", title: "Session 2", side: "right" },
-      { time: "06:00 - 08:30", title: "First Assessment Round", side: "left" },
-      { time: "08:30 - 10:00", title: "Dinner", side: "right" },
-    ]
-  },
-  {
-    day: "Night Activities",
-    date: "1st - 2nd May",
-    events: [
-      { time: "09:30 - 11:00", title: "Cultural Activity", side: "left" },
-      { time: "11:00 - 11:30", title: "Tea & Snacks", side: "right" },
-    ]
-  },
-  {
-    day: "Day 2",
-    date: "2nd May 2026",
-    events: [
-      { time: "12:00 - 02:00", title: "Midnight Games", side: "left" },
-      { time: "07:30 - 08:30", title: "Breakfast", side: "right" },
-      { time: "09:00 - 11:30", title: "Second Round of Assessment", side: "left" },
-      { time: "12:00 - 01:30", title: "Power Judging & Final Pitch", description: "Grand Finale", side: "right" },
-    ]
-  }
-];
+import { timelineData } from '@/constants/data';
 
 export default function Timeline() {
   return (

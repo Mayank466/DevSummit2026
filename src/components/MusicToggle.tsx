@@ -8,7 +8,7 @@ export default function MusicToggle() {
   const userToggledOffRef = useRef(false);
 
   useEffect(() => {
-    const audio = new Audio("/strangerthings_theme.mp3");
+    const audio = new Audio(`${import.meta.env.BASE_URL}/strangerthings_theme.mp3`);
     audio.loop = true;
     audio.volume = 0.65;
     audioRef.current = audio;
@@ -65,7 +65,7 @@ export default function MusicToggle() {
     <button id="music-toggle" onClick={toggleMusic} title={isPlaying ? "Mute" : "Play music"}>
       <div className="music-toggle-container">
         <img
-          src={isPlaying ? "/s-on.png" : "/s-off.png"}
+          src={isPlaying ? `${import.meta.env.BASE_URL}/s-on.png` : `${import.meta.env.BASE_URL}/s-off.png`}
           alt="Music Toggle"
           className="music-toggle-icon"
         />

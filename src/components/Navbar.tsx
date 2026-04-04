@@ -50,14 +50,18 @@ export default function Navbar() {
     <>
       <nav id="navbar" className={`navbar ${scrolled ? "scrolled" : ""}`} aria-label="Main navigation">
         <div className="nav-container">
-          <a href="#" className="nav-logo">
-            <img
-              src="/top-logo.png"
-              alt="Jagannath University"
-              className="nav-logo-img"
-              fetchPriority="high"
-            />
-          </a>
+          {/* Logo Group: JU → NAAC → IIC */}
+          <div className="nav-brand-group">
+            <div className="nav-brand-logo main">
+              <img src={`${import.meta.env.BASE_URL}/top-logo.png`} alt="Jagannath University" className="nav-logo-img main-logo" />
+            </div>
+            <div className="nav-brand-logo side">
+              <img src={`${import.meta.env.BASE_URL}/naac.png`} alt="NAAC" className="nav-logo-img" />
+            </div>
+            <div className="nav-brand-logo side">
+              <img src={`${import.meta.env.BASE_URL}/iic.png`} alt="IIC" className="nav-logo-img" />
+            </div>
+          </div>
 
           {/* Desktop links */}
           <div className="nav-links">
@@ -68,23 +72,27 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            <a href="https://vision.hack2skill.com/event/devsummit?utm_source=hack2skill&utm_medium=homepage&sectionid=69c7a84ee339f97e64d585e6" target="_blank" rel="noopener noreferrer" className="nav-register ml-4">REGISTER NOW</a>
           </div>
 
-          {/* Morphing Hamburger */}
-          <button
-            className={`mobile-toggle${mobileMenuOpen ? " is-open" : ""}`}
-            onClick={toggleMobileMenu}
-            aria-expanded={mobileMenuOpen}
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-            id="hamburgerBtn"
-          >
-            <span className="hamburger-bar bar-top" />
-            <span className="hamburger-bar bar-mid" />
-            <span className="hamburger-bar bar-bot" />
-          </button>
+          <div className="nav-right-group">
+            <a href="https://vision.hack2skill.com/event/devsummit?utm_source=hack2skill&utm_medium=homepage&sectionid=69c7a84ee339f97e64d585e6" target="_blank" rel="noopener noreferrer" className="nav-register">REGISTER NOW</a>
+            
+            {/* Morphing Hamburger */}
+            <button
+              className={`mobile-toggle${mobileMenuOpen ? " is-open" : ""}`}
+              onClick={toggleMobileMenu}
+              aria-expanded={mobileMenuOpen}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              id="hamburgerBtn"
+            >
+              <span className="hamburger-bar bar-top" />
+              <span className="hamburger-bar bar-mid" />
+              <span className="hamburger-bar bar-bot" />
+            </button>
+          </div>
         </div>
       </nav>
+
 
       {/* Dim backdrop — tap to close */}
       <div

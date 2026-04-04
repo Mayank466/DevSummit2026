@@ -2,16 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const faqData = [
-  { q: "Who can participate?", a: "Anyone brave enough. Students, professionals, and entities from parallel dimensions are all welcome. You must be at least 16 years old to enter the portal." },
-  { q: "How many members in a party?", a: "Your squad can have 2 to 4 members. Solo adventurers are allowed, but it's dangerous to go alone." },
-  { q: "Is there an entry fee?", a: "No. The Department of E&T covers all costs." },
-  { q: "What if I don't have a team?", a: "We will have a team-building session before the hackathon begins. You'll find your party there." },
-  { q: "What should I bring?", a: "Your rig (laptop), chargers, personal hygiene items. We provide the rest." },
-  { q: "Are we allowed to use AI?", a: "Yes. Taming synthetic intelligence is highly encouraged. Just don't let it tame you." },
-  { q: "Can we build on past projects?", a: "No. All code must be written during the 24-hour window. Existing libraries and frameworks are fine." },
-  { q: "Where do we sleep?", a: "Designated safe zones will be provided. Sleeping is optional, but hallucinations due to sleep deprivation will not grant you extra points." },
-];
+import { faqData } from "@/constants/data";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
