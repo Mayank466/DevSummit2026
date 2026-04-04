@@ -33,7 +33,7 @@ export default function Faculty({ programChair, conveyners }: FacultyProps) {
               <div className="faculty-avatar-wrap-lg">
                 <div className="faculty-avatar-lg">
                   {programChair.imageUrl ? (
-                    <img src={programChair.imageUrl} alt={programChair.name} />
+                    <img src={programChair.imageUrl.startsWith('/') ? `${import.meta.env.BASE_URL}${programChair.imageUrl.slice(1)}` : programChair.imageUrl} alt={programChair.name} />
                   ) : (
                     <div className="avatar-inner"><span className="avatar-placeholder">image</span></div>
                   )}
@@ -57,7 +57,7 @@ export default function Faculty({ programChair, conveyners }: FacultyProps) {
                   <div className="faculty-avatar-wrap-sm">
                     <div className="faculty-avatar-sm">
                       {person.imageUrl ? (
-                        <img src={person.imageUrl} alt={person.name} />
+                        <img src={person.imageUrl.startsWith('/') ? `${import.meta.env.BASE_URL}${person.imageUrl.slice(1)}` : person.imageUrl} alt={person.name} />
                       ) : (
                         <div className="avatar-inner"><span className="avatar-placeholder">image</span></div>
                       )}

@@ -8,7 +8,7 @@ export default function Hero() {
       </div>
       {/* 2. The background image itself with smooth edge blending */}
       <div className="absolute inset-0 pointer-events-none z-0" style={{
-        backgroundImage: `url(${import.meta.env.BASE_URL}/bg.png)`,
+        backgroundImage: `url(${import.meta.env.BASE_URL}bg.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         filter: 'blur(4px)',
@@ -21,7 +21,7 @@ export default function Hero() {
       }}>
         {/* Hidden img for fetch priority */}
         <img
-          src={`${import.meta.env.BASE_URL}/bg.png`}
+          src={`${import.meta.env.BASE_URL}bg.png`}
           alt=""
           style={{ display: 'none' }}
           fetchPriority="high"
@@ -35,7 +35,7 @@ export default function Hero() {
 
           <div className="hero-titles relative z-10 flex flex-col items-center">
             <img
-              src={`${import.meta.env.BASE_URL}/logo.png`}
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="DEVSUMMIT 2026"
               className="hero-logo animate-on-load"
               fetchPriority="high"
