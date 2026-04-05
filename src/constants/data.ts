@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const mentors = [
   { id: 'm1', name: 'Coming Soon', role: 'Coming Soon', company: 'Coming Soon', imageUrl: '' },

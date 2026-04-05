@@ -1,4 +1,3 @@
-"use client";
 
 import { useState, lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
