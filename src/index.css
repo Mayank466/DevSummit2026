@@ -439,12 +439,12 @@ h6,
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
-  filter: brightness(0) opacity(0.8);
+  opacity: 0.8;
 }
 
 .nav-logo-img.main-logo {
   height: 4rem;
-  filter: brightness(0) opacity(0.9);
+  opacity: 0.9;
 }
 
 
@@ -2295,14 +2295,13 @@ h6,
 .footer-social-icon {
   height: 32px;
   width: auto;
-  filter: invert(1);
   opacity: 0.6;
   transition: all 0.3s ease;
 }
 
 .social-link:hover .footer-social-icon {
   opacity: 1;
-  filter: invert(1) drop-shadow(0 0 8px hsla(var(--primary), 0.8));
+  filter: drop-shadow(0 0 8px hsla(var(--primary), 0.8));
 }
 
 .social-link:hover {

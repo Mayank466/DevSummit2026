@@ -66,16 +66,16 @@ export default function Footer() {
           <div className="footer-quick-links">
             <h5 className="footer-subtitle">Quick Links</h5>
             <div className="quick-links-list">
-              <a href={`${import.meta.env.BASE_URL}/brochure.pdf`} target="_blank" rel="noopener noreferrer" className="quick-link">Brochure</a>
-              <a href={`${import.meta.env.BASE_URL}/poster.pdf`} target="_blank" rel="noopener noreferrer" className="quick-link">Poster</a>
+              <a href={`${import.meta.env.BASE_URL}brochure.pdf`} target="_blank" rel="noopener noreferrer" className="quick-link">Brochure</a>
+              <a href={`${import.meta.env.BASE_URL}poster.pdf`} target="_blank" rel="noopener noreferrer" className="quick-link">Poster</a>
             </div>
           </div>
 
           <div className="footer-links">
-            <a href="https://x.com/Devsummit2026?s=20" className="social-link"><img src={`${import.meta.env.BASE_URL}/x.png`} alt="X (Twitter)" className="footer-social-icon icon-x" loading="lazy" /></a>
-            <a href="https://www.linkedin.com/company/devsummit-2026/" className="social-link"><img src={`${import.meta.env.BASE_URL}/ln.png`} alt="LINKEDIN" className="footer-social-icon icon-linkedin" loading="lazy" /></a>
-            <a href="https://www.instagram.com/devsummit2026/" className="social-link"><img src={`${import.meta.env.BASE_URL}/ig.png`} alt="INSTAGRAM" className="footer-social-icon icon-instagram" loading="lazy" /></a>
-            <a href="https://discord.gg/rmcpwX27MG" className="social-link"><img src={`${import.meta.env.BASE_URL}/ds.png`} alt="DISCORD" className="footer-social-icon icon-discord" loading="lazy" /></a>
+            <a href="https://x.com/Devsummit2026?s=20" className="social-link"><img src={`${import.meta.env.BASE_URL}x.png`} alt="X (Twitter)" className="footer-social-icon icon-x" loading="lazy" /></a>
+            <a href="https://www.linkedin.com/company/devsummit-2026/" className="social-link"><img src={`${import.meta.env.BASE_URL}ln.png`} alt="LINKEDIN" className="footer-social-icon icon-linkedin" loading="lazy" /></a>
+            <a href="https://www.instagram.com/devsummit2026/" className="social-link"><img src={`${import.meta.env.BASE_URL}ig.png`} alt="INSTAGRAM" className="footer-social-icon icon-instagram" loading="lazy" /></a>
+            <a href="https://discord.gg/rmcpwX27MG" className="social-link"><img src={`${import.meta.env.BASE_URL}ds.png`} alt="DISCORD" className="footer-social-icon icon-discord" loading="lazy" /></a>
           </div>
         </div>
       </div>
