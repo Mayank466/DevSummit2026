@@ -381,7 +381,7 @@ h6,
   right: 0;
   z-index: 55;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 1rem 0 3rem; /* Increased bottom padding for the fade effect */
+  padding: 0.5rem 0 1.5rem; /* Reduced padding to decrease thickness */
   background: linear-gradient(to bottom, 
     rgba(255, 255, 255, 0.96) 0%, 
     rgba(255, 255, 255, 0.7) 60%, 
@@ -394,7 +394,7 @@ h6,
 }
 
 .navbar.scrolled {
-  padding: 0.6rem 0 2.5rem;
+  padding: 0.3rem 0 1.2rem; /* Even more compact when scrolled */
   background: linear-gradient(to bottom, 
     rgba(255, 255, 255, 0.92) 0%, 
     rgba(255, 255, 255, 0.6) 60%, 
@@ -429,13 +429,29 @@ h6,
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0.25rem 0 1rem; /* Even thinner on mobile */
+  }
+  
+  .navbar.scrolled {
+    padding: 0.15rem 0 0.75rem;
+  }
+
   .nav-brand-logo.side {
     display: none;
+  }
+
+  .nav-logo-img.main-logo {
+    height: 2.25rem; /* Smaller logo on mobile to match thin navbar */
+  }
+
+  .nav-container {
+    padding: 0 1rem;
   }
 }
 
 .nav-logo-img {
-  height: 3.5rem;
+  height: 2.75rem; /* Increased size for secondary logos */
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -443,8 +459,13 @@ h6,
 }
 
 .nav-logo-img.main-logo {
-  height: 4rem;
+  height: 3.25rem; /* Increased size for main logo */
   opacity: 0.9;
+}
+
+.nav-logo-img.naac-logo {
+  height: 3.75rem; /* Larger than other secondary logos */
+  opacity: 1; /* More prominent */
 }
 
 
@@ -472,6 +493,7 @@ h6,
 .nav-link {
   font-family: var(--font-mono);
   font-size: 0.875rem;
+  font-weight: 700; /* Bolded links */
   letter-spacing: 0.05em;
   color: #1a1a1a;
   transition: all 0.3s ease;
@@ -498,7 +520,7 @@ h6,
 }
 
 .nav-register {
-  padding: 0.625rem 1.25rem;
+  padding: 0.5rem 1rem; /* Compact padding */
   font-family: var(--font-mono);
   font-size: 0.875rem;
   font-weight: 700;

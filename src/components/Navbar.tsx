@@ -55,7 +55,7 @@ export default function Navbar() {
               <img src={`${import.meta.env.BASE_URL}top-logo.png`} alt="Jagannath University" className="nav-logo-img main-logo" />
             </div>
             <div className="nav-brand-logo side">
-              <img src={`${import.meta.env.BASE_URL}naac.png`} alt="NAAC" className="nav-logo-img" />
+              <img src={`${import.meta.env.BASE_URL}naac.png`} alt="NAAC" className="nav-logo-img naac-logo" />
             </div>
             <div className="nav-brand-logo side">
               <img src={`${import.meta.env.BASE_URL}iic.png`} alt="IIC" className="nav-logo-img" />
