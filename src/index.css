@@ -381,12 +381,12 @@ h6,
   right: 0;
   z-index: 55;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 0.5rem 0 1.5rem; /* Reduced padding to decrease thickness */
-  background: linear-gradient(to bottom, 
-    rgba(255, 255, 255, 0.96) 0%, 
-    rgba(255, 255, 255, 0.7) 60%, 
-    transparent 100%
-  );
+  padding: 0.5rem 0 1.5rem;
+  /* Reduced padding to decrease thickness */
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.7) 60%,
+      transparent 100%);
   backdrop-filter: blur(12px) saturate(160%);
   border-bottom: none;
   box-shadow: none;
@@ -394,12 +394,12 @@ h6,
 }
 
 .navbar.scrolled {
-  padding: 0.3rem 0 1.2rem; /* Even more compact when scrolled */
-  background: linear-gradient(to bottom, 
-    rgba(255, 255, 255, 0.92) 0%, 
-    rgba(255, 255, 255, 0.6) 60%, 
-    transparent 100%
-  );
+  padding: 0.3rem 0 1.2rem;
+  /* Even more compact when scrolled */
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.6) 60%,
+      transparent 100%);
 }
 
 
@@ -430,9 +430,10 @@ h6,
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.25rem 0 1rem; /* Even thinner on mobile */
+    padding: 0.25rem 0 1rem;
+    /* Even thinner on mobile */
   }
-  
+
   .navbar.scrolled {
     padding: 0.15rem 0 0.75rem;
   }
@@ -442,7 +443,8 @@ h6,
   }
 
   .nav-logo-img.main-logo {
-    height: 2.25rem; /* Smaller logo on mobile to match thin navbar */
+    height: 2.25rem;
+    /* Smaller logo on mobile to match thin navbar */
   }
 
   .nav-container {
@@ -451,7 +453,8 @@ h6,
 }
 
 .nav-logo-img {
-  height: 2.75rem; /* Increased size for secondary logos */
+  height: 2.75rem;
+  /* Increased size for secondary logos */
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -459,13 +462,16 @@ h6,
 }
 
 .nav-logo-img.main-logo {
-  height: 3.25rem; /* Increased size for main logo */
+  height: 3.25rem;
+  /* Increased size for main logo */
   opacity: 0.9;
 }
 
 .nav-logo-img.naac-logo {
-  height: 3.75rem; /* Larger than other secondary logos */
-  opacity: 1; /* More prominent */
+  height: 3.75rem;
+  /* Larger than other secondary logos */
+  opacity: 1;
+  /* More prominent */
 }
 
 
@@ -493,7 +499,8 @@ h6,
 .nav-link {
   font-family: var(--font-mono);
   font-size: 0.875rem;
-  font-weight: 700; /* Bolded links */
+  font-weight: 700;
+  /* Bolded links */
   letter-spacing: 0.05em;
   color: #1a1a1a;
   transition: all 0.3s ease;
@@ -520,7 +527,8 @@ h6,
 }
 
 .nav-register {
-  padding: 0.5rem 1rem; /* Compact padding */
+  padding: 0.5rem 1rem;
+  /* Compact padding */
   font-family: var(--font-mono);
   font-size: 0.875rem;
   font-weight: 700;
@@ -2062,8 +2070,8 @@ h6,
 }
 
 .sponsor-img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   display: block;
   opacity: 0.85;
@@ -2079,6 +2087,21 @@ h6,
   height: 6rem;
 }
 
+.sponsor-hero {
+  width: 18rem;
+  max-width: 90vw;
+  height: 6rem;
+  padding: 0.5rem !important;
+}
+
+@media (min-width: 1024px) {
+  .sponsor-hero {
+    width: 21.5rem;
+    height: 7.5rem;
+    padding: 0.75rem !important;
+  }
+}
+
 .sponsor-md {
   height: 4rem;
 }
@@ -2089,6 +2112,102 @@ h6,
 
 .sponsor-sm span {
   font-size: 1.125rem;
+}
+
+/* Sponsor Join Button */
+.sponsor-join-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  perspective: 1000px;
+}
+
+.sponsor-join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 3.5rem;
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(0, 100%, 30%) 100%);
+  color: #fff !important;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid hsla(var(--primary), 0.5);
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.4),
+    0 0 20px hsla(var(--primary), 0.3),
+    inset 0 0 15px hsla(0, 0%, 100%, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.sponsor-join-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transition: 0.5s;
+}
+
+.sponsor-join-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(135deg, hsl(0, 100%, 55%) 0%, hsl(var(--primary)) 100%);
+  box-shadow:
+    0 15px 35px -5px rgba(0, 0, 0, 0.5),
+    0 0 35px hsla(var(--primary), 0.5),
+    inset 0 0 20px hsla(0, 0%, 100%, 0.2);
+  border-color: #fff;
+  color: #fff !important;
+}
+
+.sponsor-join-btn:hover::before {
+  left: 100%;
+}
+
+.sponsor-join-btn:active {
+  transform: translateY(-2px) scale(1.02);
+  transition: 0.1s;
+}
+
+.sponsor-mail-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+  transition: transform 0.4s ease;
+}
+
+.sponsor-join-btn:hover .sponsor-mail-icon {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+@media (max-width: 640px) {
+  .sponsor-join-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    gap: 0.75rem;
+  }
+
+  .sponsor-mail-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* ===== FAQ Section ===== */
@@ -3937,7 +4056,7 @@ h6,
   }
 
 
-  }
+}
 
 
 /* ===== Mobile (481px–639px) ===== */

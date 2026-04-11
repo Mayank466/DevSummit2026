@@ -42,8 +42,8 @@ export default function Sponsors() {
               </div>
               <div className="sponsor-logos">
                 <div className="sponsor-item">
-                  <div className="sponsor-logo sponsor-lg sponsor-logo--image">
-                    <img src={`${import.meta.env.BASE_URL}sponsor/h2s.png`} alt="H2S Media" className="sponsor-img" loading="lazy" />
+                  <div className="sponsor-logo sponsor-logo--image sponsor-hero">
+                    <img src={`${import.meta.env.BASE_URL}sponsor/h2s.png`} alt="H2S Media" className="sponsor-img" style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                   </div>
                   <p className="sponsor-desc">Premium platform provider</p>
                 </div>
@@ -60,8 +60,8 @@ export default function Sponsors() {
               </div>
               <div className="sponsor-logos">
                 <div className="sponsor-item">
-                  <div className="sponsor-logo sponsor-md sponsor-logo--image" style={{ padding: '1rem' }}>
-                    <img src={`${import.meta.env.BASE_URL}sponsor/prabony.png`} alt="Prabony" className="sponsor-img" style={{ objectFit: 'contain' }} loading="lazy" />
+                  <div className="sponsor-logo sponsor-logo--image sponsor-hero">
+                    <img src={`${import.meta.env.BASE_URL}sponsor/prabony.png`} alt="Prabony" className="sponsor-img" style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -122,7 +122,26 @@ export default function Sponsors() {
               </div>
             </div>
           </div>
+        </div>
 
+        {/* Join as a Sponsor Button */}
+        <div className="sponsor-join-container scroll-animate" style={{ "--delay": "0.6s" } as React.CSSProperties}>
+          <a
+            href="https://forms.gle/8De2H2LQSftnpvL5A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sponsor-join-btn"
+          >
+            <svg
+              className="sponsor-mail-icon"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span>Join as a Sponsor</span>
+          </a>
         </div>
       </div>
     </section>
