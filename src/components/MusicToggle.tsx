@@ -12,33 +12,54 @@ export default function MusicToggle() {
     audio.volume = 0.65;
     audioRef.current = audio;
 
-    let startOnce: () => void;
+    const handleInteraction = () => {
+      if (!userToggledOffRef.current && audioRef.current) {
+        audioRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
+      }
+      removeInteractionListeners();
+    };
 
-    // Try autoplay immediately
-    audio.play().then(() => {
-      setIsPlaying(true);
-    }).catch(() => {
-      // Browser blocked — start on first interaction anywhere ONCE
-      startOnce = () => {
-        if (!userToggledOffRef.current && audioRef.current) {
-          audioRef.current.play().then(() => setIsPlaying(true));
-        }
-        // Remove after first trigger — never fires again
-        document.removeEventListener("click", startOnce, true);
-        document.removeEventListener("keydown", startOnce, true);
-        document.removeEventListener("touchstart", startOnce, true);
-      };
-      document.addEventListener("click", startOnce, true);
-      document.addEventListener("keydown", startOnce, true);
-      document.addEventListener("touchstart", startOnce, true);
-    });
+    const addInteractionListeners = () => {
+      document.addEventListener("click", handleInteraction, true);
+      document.addEventListener("keydown", handleInteraction, true);
+      document.addEventListener("touchstart", handleInteraction, true);
+    };
+
+    const removeInteractionListeners = () => {
+      document.removeEventListener("click", handleInteraction, true);
+      document.removeEventListener("keydown", handleInteraction, true);
+      document.removeEventListener("touchstart", handleInteraction, true);
+    };
+
+    const tryPlay = () => {
+      if (document.visibilityState !== "visible" || userToggledOffRef.current) return;
+      
+      audio.play().then(() => {
+        setIsPlaying(true);
+      }).catch(() => {
+        // Browser blocked — wait for interaction
+        removeInteractionListeners();
+        addInteractionListeners();
+      });
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        audio.pause();
+        setIsPlaying(false);
+      } else {
+        tryPlay();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    // Initial play attempt
+    tryPlay();
 
     return () => {
-      if (startOnce) {
-        document.removeEventListener("click", startOnce, true);
-        document.removeEventListener("keydown", startOnce, true);
-        document.removeEventListener("touchstart", startOnce, true);
-      }
+      removeInteractionListeners();
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       audio.pause();
       audioRef.current = null;
     };
