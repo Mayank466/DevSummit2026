@@ -2070,9 +2070,9 @@ h6,
 }
 
 .sponsor-img {
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
   opacity: 0.85;
   transition: opacity 0.3s, filter 0.3s;

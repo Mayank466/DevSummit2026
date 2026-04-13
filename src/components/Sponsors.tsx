@@ -85,11 +85,21 @@ export default function Sponsors() {
                 <p className="sponsor-desc">Domain Sponsor</p>
               </div>
               <div className="sponsor-item">
-                <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>
+                <div className="sponsor-logo sponsor-md">
+                  <img src={`${import.meta.env.BASE_URL}sponsor/ea.png`} alt="Engineers Academy" className="sponsor-img" loading="lazy" />
+                </div>
                 <p className="sponsor-desc"></p>
               </div>
               <div className="sponsor-item">
-                <div className="sponsor-logo sponsor-md"><span>Coming Soon</span></div>
+                <div className="sponsor-logo sponsor-md">
+                  <img src={`${import.meta.env.BASE_URL}sponsor/nimbus.png`} alt="NIMBUS" className="sponsor-img" loading="lazy" />
+                </div>
+                <p className="sponsor-desc"></p>
+              </div>
+              <div className="sponsor-item">
+                <div className="sponsor-logo sponsor-md">
+                  <img src={`${import.meta.env.BASE_URL}sponsor/upflairs.png`} alt="Upflairs" className="sponsor-img" loading="lazy" />
+                </div>
                 <p className="sponsor-desc"></p>
               </div>
             </div>
