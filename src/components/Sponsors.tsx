@@ -88,46 +88,35 @@ export default function Sponsors() {
                 <div className="sponsor-logo sponsor-md">
                   <img src={`${import.meta.env.BASE_URL}sponsor/ea.png`} alt="Engineers Academy" className="sponsor-img" loading="lazy" />
                 </div>
-                <p className="sponsor-desc"></p>
+                <p className="sponsor-desc">Technical Partner</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
                   <img src={`${import.meta.env.BASE_URL}sponsor/nimbus.png`} alt="NIMBUS" className="sponsor-img" loading="lazy" />
                 </div>
-                <p className="sponsor-desc"></p>
+                <p className="sponsor-desc">Technical Partner</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
                   <img src={`${import.meta.env.BASE_URL}sponsor/upflairs.png`} alt="Upflairs" className="sponsor-img" loading="lazy" />
                 </div>
-                <p className="sponsor-desc"></p>
+                <p className="sponsor-desc">Technical Partner</p>
               </div>
-            </div>
-          </div>
-
-          {/* Partners */}
-          <div className="sponsor-tier scroll-animate" style={{ "--delay": "0.4s" } as React.CSSProperties}>
-            <div className="tier-header">
-              <h3 className="tier-label">
-                <span className="tier-label-text">PARTNERS</span>
-                <div className="tier-line"></div>
-              </h3>
-            </div>
-            <div className="sponsor-logos">
               <div className="sponsor-item">
-                <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
+                <div className="sponsor-logo sponsor-md">
+                  <span>Coming Soon</span>
+                </div>
+                <p className="sponsor-desc"></p>
+              </div><div className="sponsor-item">
+                <div className="sponsor-logo sponsor-md">
+                  <span>Coming Soon</span>
+                </div>
                 <p className="sponsor-desc"></p>
               </div>
               <div className="sponsor-item">
-                <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
-                <p className="sponsor-desc"></p>
-              </div>
-              <div className="sponsor-item">
-                <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
-                <p className="sponsor-desc"></p>
-              </div>
-              <div className="sponsor-item">
-                <div className="sponsor-logo sponsor-sm"><span>Coming Soon</span></div>
+                <div className="sponsor-logo sponsor-md">
+                  <span>Coming Soon</span>
+                </div>
                 <p className="sponsor-desc"></p>
               </div>
             </div>
