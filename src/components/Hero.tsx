@@ -58,7 +58,7 @@ export default function Hero() {
             <div className="registration-status-box animate-on-load delay-2">
               <div className="status-badge">
                 <span className="status-dot"></span>
-                <span className="status-text">REGISTRATION CLOSING SOON</span>
+                <span className="status-text">REGISTRATION CLOSED</span>
               </div>
               <p className="status-subtext">15th April, 2026</p>
             </div>
