@@ -75,7 +75,6 @@ export default function Merch() {
                         position: "relative",
                         width: "100%",
                         maxWidth: "500px",
-                        aspectRatio: "1/1",
                         borderRadius: "4px",
                         border: "3px solid var(--primary-color)",
                         background: "rgba(5, 5, 5, 0.8)",
@@ -89,6 +88,9 @@ export default function Merch() {
                         <div className="corner-decor top-right"></div>
                         <div className="corner-decor bottom-left"></div>
                         <div className="corner-decor bottom-right"></div>
+
+                        {/* Invisible structural driver to eliminate letterbox wiping delay */}
+                        <img src={images[0]} style={{ width: "100%", height: "auto", visibility: "hidden" }} alt="prop" />
 
                         <img src={bgImage} alt="T-Shirt Background" className={`scan-bg-img bg-sweep-${direction}`} key={`bg-${phaseIndex}`} />
                         <img src={fgImage} alt="T-Shirt Foreground" className={`scan-fg-img fg-sweep-${direction}`} key={`fg-${phaseIndex}`} />
