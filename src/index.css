@@ -5283,7 +5283,43 @@ h6,
 }
 
 /* Merch Section Elements */
-.scanner-bar {
+.scan-bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.3));
+}
+
+.scan-fg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.3));
+}
+
+.sweep-active-down {
+  animation: wipe-down 3s linear forwards;
+}
+
+.sweep-active-up {
+  animation: wipe-up 3s linear forwards;
+}
+
+@keyframes wipe-down {
+  0% { clip-path: inset(0 0 100% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes wipe-up {
+  0% { clip-path: inset(100% 0 0 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+.scanner-bar-react {
   position: absolute;
   top: 0;
   left: 0;
@@ -5291,10 +5327,9 @@ h6,
   height: 100%;
   z-index: 10;
   pointer-events: none;
-  animation: scan-bar-sweep 12s infinite linear;
 }
 
-.scanner-bar::after {
+.scanner-bar-react::after {
   content: '';
   position: absolute;
   top: 0;
@@ -5305,240 +5340,22 @@ h6,
   box-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c, 0 0 50px #ff003c;
 }
 
-@keyframes scan-bar-sweep {
-  0% {
-    transform: translateY(0);
-  }
-
-  16.666% {
-    transform: translateY(calc(100% - 4px));
-  }
-
-  33.333% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(calc(100% - 4px));
-  }
-
-  66.666% {
-    transform: translateY(0);
-  }
-
-  83.333% {
-    transform: translateY(calc(100% - 4px));
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+.bar-sweep-down {
+  animation: bar-down 3s linear forwards;
 }
 
-.scan-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.3));
+.bar-sweep-up {
+  animation: bar-up 3s linear forwards;
 }
 
-.scan-img-a {
-  animation: sweep-img-a 12s infinite linear;
+@keyframes bar-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(calc(100% - 4px)); }
 }
 
-.scan-img-b {
-  animation: sweep-img-b 12s infinite linear;
-}
-
-.scan-img-c {
-  animation: sweep-img-c 12s infinite linear;
-}
-
-@keyframes sweep-img-a {
-  0% {
-    clip-path: inset(0 0 100% 0);
-    z-index: 2;
-  }
-
-  16.666% {
-    clip-path: inset(0);
-    z-index: 2;
-  }
-
-  16.667% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  33.333% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  33.334% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  50% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  50.001% {
-    clip-path: inset(100% 0 0 0);
-    z-index: 2;
-  }
-
-  66.666% {
-    clip-path: inset(0);
-    z-index: 2;
-  }
-
-  66.667% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  83.333% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  83.334% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  100% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-}
-
-@keyframes sweep-img-b {
-  0% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  16.666% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  16.667% {
-    clip-path: inset(100% 0 0 0);
-    z-index: 2;
-  }
-
-  33.333% {
-    clip-path: inset(0);
-    z-index: 2;
-  }
-
-  33.334% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  50% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  50.001% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  66.666% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  66.667% {
-    clip-path: inset(0 0 100% 0);
-    z-index: 2;
-  }
-
-  83.333% {
-    clip-path: inset(0);
-    z-index: 2;
-  }
-
-  83.334% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  100% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-}
-
-@keyframes sweep-img-c {
-  0% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  16.666% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  16.667% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  33.333% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  33.334% {
-    clip-path: inset(0 0 100% 0);
-    z-index: 2;
-  }
-
-  50% {
-    clip-path: inset(0);
-    z-index: 2;
-  }
-
-  50.001% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  66.666% {
-    clip-path: inset(0);
-    z-index: 1;
-  }
-
-  66.667% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  83.333% {
-    clip-path: inset(100%);
-    z-index: 0;
-  }
-
-  83.334% {
-    clip-path: inset(100% 0 0 0);
-    z-index: 2;
-  }
-
-  100% {
-    clip-path: inset(0);
-    z-index: 2;
-  }
+@keyframes bar-up {
+  0% { transform: translateY(calc(100% - 4px)); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes float {

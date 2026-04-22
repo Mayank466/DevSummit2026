@@ -1,7 +1,23 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Merch() {
     const merchRef = useRef<HTMLElement>(null);
+    const [phaseIndex, setPhaseIndex] = useState(0);
+
+    const images = ["/t-front.png", "/t-back.png", "/t-both.png"];
+    // 0: front, 1: back, 2: both
+    // Order: Sweep down reveals Front, Up reveals Back, Down reveals Both, Up reveals Front, Down reveals Back, Up reveals Both
+    const bgSequence = [2, 0, 1, 2, 0, 1];
+    const fgSequence = [0, 1, 2, 0, 1, 2];
+    const dirSequence = ['down', 'up', 'down', 'up', 'down', 'up'];
+
+    const bgImage = images[bgSequence[phaseIndex]];
+    const fgImage = images[fgSequence[phaseIndex]];
+    const direction = dirSequence[phaseIndex];
+
+    const handleSweepEnd = () => {
+        setPhaseIndex((prev) => (prev + 1) % 6);
+    };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -74,10 +90,9 @@ export default function Merch() {
                         <div className="corner-decor bottom-left"></div>
                         <div className="corner-decor bottom-right"></div>
 
-                        <div className="scanner-bar"></div>
-                        <img src="/t-front.png" alt="T-Shirt Front" className="scan-img scan-img-a" />
-                        <img src="/t-back.png" alt="T-Shirt Back" className="scan-img scan-img-b" />
-                        <img src="/t-both.png" alt="T-Shirt Both" className="scan-img scan-img-c" />
+                        <img src={bgImage} alt="T-Shirt Background" className="scan-bg-img" />
+                        <img src={fgImage} alt="T-Shirt Foreground" className={`scan-fg-img sweep-active-${direction}`} key={`fg-${phaseIndex}`} />
+                        <div className={`scanner-bar-react bar-sweep-${direction}`} key={`bar-${phaseIndex}`} onAnimationEnd={handleSweepEnd}></div>
                     </div>
 
                     <div className="merch-actions scroll-animate" style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%", maxWidth: "600px" }}>
