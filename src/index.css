@@ -5301,22 +5301,40 @@ h6,
   filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.3));
 }
 
-.sweep-active-down {
-  animation: wipe-down 3s linear forwards;
+.fg-sweep-down {
+  animation: wipe-in-down 3s linear forwards;
 }
 
-.sweep-active-up {
-  animation: wipe-up 3s linear forwards;
+.bg-sweep-down {
+  animation: wipe-out-down 3s linear forwards;
 }
 
-@keyframes wipe-down {
+.fg-sweep-up {
+  animation: wipe-in-up 3s linear forwards;
+}
+
+.bg-sweep-up {
+  animation: wipe-out-up 3s linear forwards;
+}
+
+@keyframes wipe-in-down {
   0% { clip-path: inset(0 0 100% 0); }
   100% { clip-path: inset(0 0 0 0); }
 }
 
-@keyframes wipe-up {
+@keyframes wipe-out-down {
+  0% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(100% 0 0 0); }
+}
+
+@keyframes wipe-in-up {
   0% { clip-path: inset(100% 0 0 0); }
   100% { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes wipe-out-up {
+  0% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 0 100% 0); }
 }
 
 .scanner-bar-react {

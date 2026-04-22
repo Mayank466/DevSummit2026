@@ -90,8 +90,8 @@ export default function Merch() {
                         <div className="corner-decor bottom-left"></div>
                         <div className="corner-decor bottom-right"></div>
 
-                        <img src={bgImage} alt="T-Shirt Background" className="scan-bg-img" />
-                        <img src={fgImage} alt="T-Shirt Foreground" className={`scan-fg-img sweep-active-${direction}`} key={`fg-${phaseIndex}`} />
+                        <img src={bgImage} alt="T-Shirt Background" className={`scan-bg-img bg-sweep-${direction}`} key={`bg-${phaseIndex}`} />
+                        <img src={fgImage} alt="T-Shirt Foreground" className={`scan-fg-img fg-sweep-${direction}`} key={`fg-${phaseIndex}`} />
                         <div className={`scanner-bar-react bar-sweep-${direction}`} key={`bar-${phaseIndex}`} onAnimationEnd={handleSweepEnd}></div>
                     </div>
 
