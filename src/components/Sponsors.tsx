@@ -20,13 +20,15 @@ export default function Sponsors() {
             <div className="sponsor-tier sponsor-tier--half">
               <div className="tier-header">
                 <h3 className="tier-label">
-                  <span className="tier-label-text">TITLE SPONSORS</span>
+                  <span className="tier-label-text">BANKING PARTNER</span>
                   <div className="tier-line"></div>
                 </h3>
               </div>
               <div className="sponsor-logos">
                 <div className="sponsor-item">
-                  <div className="sponsor-logo sponsor-lg"><span>Coming Soon</span></div>
+                  <div className="sponsor-logo sponsor-logo--image sponsor-hero">
+                    <img src={`${import.meta.env.BASE_URL}sponsor/icici.png`} alt="ICICI Bank" className="sponsor-img" style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
+                  </div>
                   <p className="sponsor-desc"></p>
                 </div>
               </div>
@@ -77,7 +79,7 @@ export default function Sponsors() {
                 <div className="tier-line"></div>
               </h3>
             </div>
-            <div className="sponsor-logos">
+            <div className="sponsor-logos sponsor-grid">
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
                   <img src={`${import.meta.env.BASE_URL}sponsor/xyz.png`} alt="xyz" className="sponsor-img" loading="lazy" />
@@ -110,15 +112,15 @@ export default function Sponsors() {
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
-                  <span>Coming Soon</span>
+                  <img src={`${import.meta.env.BASE_URL}sponsor/grass.png`} alt="Grass" className="sponsor-img" loading="lazy" />
                 </div>
-                <p className="sponsor-desc"></p>
+                <p className="sponsor-desc">Technical Partner</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
-                  <span>Coming Soon</span>
+                  <img src={`${import.meta.env.BASE_URL}sponsor/gdg.png`} alt="GDG" className="sponsor-img" loading="lazy" />
                 </div>
-                <p className="sponsor-desc"></p>
+                <p className="sponsor-desc">Community Partner</p>
               </div>
             </div>
           </div>
