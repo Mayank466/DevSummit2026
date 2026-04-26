@@ -52,13 +52,13 @@ export default function Navbar() {
           {/* Logo Group: JU → NAAC → IIC */}
           <div className="nav-brand-group">
             <div className="nav-brand-logo main">
-              <img src={`${import.meta.env.BASE_URL}top-logo.png`} alt="Jagannath University" className="nav-logo-img main-logo" />
+              <img src={`${import.meta.env.BASE_URL}top-logo.webp`} alt="Jagannath University" className="nav-logo-img main-logo" />
             </div>
             <div className="nav-brand-logo side">
-              <img src={`${import.meta.env.BASE_URL}naac.png`} alt="NAAC" className="nav-logo-img naac-logo" />
+              <img src={`${import.meta.env.BASE_URL}naac.webp`} alt="NAAC" className="nav-logo-img naac-logo" loading="lazy" />
             </div>
             <div className="nav-brand-logo side">
-              <img src={`${import.meta.env.BASE_URL}iic.png`} alt="IIC" className="nav-logo-img" />
+              <img src={`${import.meta.env.BASE_URL}iic.webp`} alt="IIC" className="nav-logo-img" loading="lazy" />
             </div>
           </div>
 

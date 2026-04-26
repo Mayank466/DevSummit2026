@@ -28,22 +28,43 @@ export default function ScrollObserver() {
     });
 
     // 2. Scroll Position tracking (for tagline expanding)
+    // Cache DOM queries — these don't change after mount
+    let scrollElements: HTMLElement[] | null = null;
     let animationFrameId: number;
+    let lastUpdate = 0;
+
+    const cacheElements = () => {
+      scrollElements = Array.from(
+        document.querySelectorAll('.title-bar, .tier-line, .timeline-rift, .timeline-connector')
+      ) as HTMLElement[];
+    };
+
+    // Initial cache after a short delay to let lazy components load
+    setTimeout(cacheElements, 2000);
 
     const onScrollLoop = () => {
+      const now = performance.now();
+      // Throttle to ~20fps (50ms) — scroll CSS vars don't need 60fps
+      if (now - lastUpdate < 50) {
+        animationFrameId = requestAnimationFrame(onScrollLoop);
+        return;
+      }
+      lastUpdate = now;
+
       const currentScrollY = window.scrollY;
 
       // Update CSS variables for global use
       document.documentElement.style.setProperty('--scroll-y', `${currentScrollY}`);
 
       // Update local scroll for bars, tier lines, and timeline lines
-      document.querySelectorAll('.title-bar, .tier-line, .timeline-rift, .timeline-connector').forEach(el => {
-        const rect = el.getBoundingClientRect();
+      if (scrollElements) {
         const windowHeight = window.innerHeight;
-        // Progress starts when the element enters the bottom of the viewport
-        const progress = Math.max(0, windowHeight - rect.top);
-        (el as HTMLElement).style.setProperty('--local-scroll', `${progress}`);
-      });
+        for (let i = 0; i < scrollElements.length; i++) {
+          const rect = scrollElements[i].getBoundingClientRect();
+          const progress = Math.max(0, windowHeight - rect.top);
+          scrollElements[i].style.setProperty('--local-scroll', `${progress}`);
+        }
+      }
 
       animationFrameId = requestAnimationFrame(onScrollLoop);
     };

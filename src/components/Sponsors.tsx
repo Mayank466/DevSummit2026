@@ -27,7 +27,7 @@ export default function Sponsors() {
               <div className="sponsor-logos">
                 <div className="sponsor-item">
                   <div className="sponsor-logo sponsor-logo--image sponsor-hero">
-                    <img src={`${import.meta.env.BASE_URL}sponsor/icici.png`} alt="ICICI Bank" className="sponsor-img" style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
+                    <img src={`${import.meta.env.BASE_URL}sponsor/icici.webp`} alt="ICICI Bank" className="sponsor-img" style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                   </div>
                   <p className="sponsor-desc"></p>
                 </div>
@@ -45,7 +45,7 @@ export default function Sponsors() {
               <div className="sponsor-logos">
                 <div className="sponsor-item">
                   <div className="sponsor-logo sponsor-logo--image sponsor-hero">
-                    <img src={`${import.meta.env.BASE_URL}sponsor/h2s.png`} alt="H2S Media" className="sponsor-img" style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
+                    <img src={`${import.meta.env.BASE_URL}sponsor/h2s.webp`} alt="H2S Media" className="sponsor-img" style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                   </div>
                   <p className="sponsor-desc">Premium platform provider</p>
                 </div>
@@ -63,7 +63,7 @@ export default function Sponsors() {
               <div className="sponsor-logos">
                 <div className="sponsor-item">
                   <div className="sponsor-logo sponsor-logo--image sponsor-hero">
-                    <img src={`${import.meta.env.BASE_URL}sponsor/prabony.png`} alt="Prabony" className="sponsor-img" style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
+                    <img src={`${import.meta.env.BASE_URL}sponsor/prabony.webp`} alt="Prabony" className="sponsor-img" style={{ objectFit: 'contain', width: '100%', height: '100%' }} loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -82,43 +82,49 @@ export default function Sponsors() {
             <div className="sponsor-logos sponsor-grid">
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
-                  <img src={`${import.meta.env.BASE_URL}sponsor/xyz.png`} alt="xyz" className="sponsor-img" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}sponsor/xyz.webp`} alt="xyz" className="sponsor-img" loading="lazy" />
                 </div>
                 <p className="sponsor-desc">Domain Sponsor</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
-                  <img src={`${import.meta.env.BASE_URL}sponsor/ea.png`} alt="Engineers Academy" className="sponsor-img" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}sponsor/ea.webp`} alt="Engineers Academy" className="sponsor-img" loading="lazy" />
                 </div>
                 <p className="sponsor-desc">Technical Partner</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
-                  <img src={`${import.meta.env.BASE_URL}sponsor/nimbus.png`} alt="NIMBUS" className="sponsor-img" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}sponsor/nimbus.webp`} alt="NIMBUS" className="sponsor-img" loading="lazy" />
                 </div>
                 <p className="sponsor-desc">Technical Partner</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
-                  <img src={`${import.meta.env.BASE_URL}sponsor/upflairs.png`} alt="Upflairs" className="sponsor-img" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}sponsor/upflairs.webp`} alt="Upflairs" className="sponsor-img" loading="lazy" />
                 </div>
                 <p className="sponsor-desc">Technical Partner</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
-                  <img src={`${import.meta.env.BASE_URL}sponsor/pedestal.png`} alt="Pedestal" className="sponsor-img" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}sponsor/pedestal.webp`} alt="Pedestal" className="sponsor-img" loading="lazy" />
                 </div>
                 <p className="sponsor-desc">Technical Partner</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
-                  <img src={`${import.meta.env.BASE_URL}sponsor/grras.png`} alt="Grass" className="sponsor-img" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}sponsor/grras.webp`} alt="Grass" className="sponsor-img" loading="lazy" />
                 </div>
                 <p className="sponsor-desc">Technical Partner</p>
               </div>
               <div className="sponsor-item">
                 <div className="sponsor-logo sponsor-md">
-                  <img src={`${import.meta.env.BASE_URL}sponsor/gdg.png`} alt="GDG" className="sponsor-img" loading="lazy" />
+                  <img src={`${import.meta.env.BASE_URL}sponsor/snooze.webp`} alt="Snoozeit" className="sponsor-img" loading="lazy" />
+                </div>
+                <p className="sponsor-desc">Media Partner</p>
+              </div>
+              <div className="sponsor-item">
+                <div className="sponsor-logo sponsor-md">
+                  <img src={`${import.meta.env.BASE_URL}sponsor/gdg.webp`} alt="GDG" className="sponsor-img" loading="lazy" />
                 </div>
                 <p className="sponsor-desc">Community Partner</p>
               </div>

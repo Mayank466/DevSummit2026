@@ -85,7 +85,7 @@ export default function MusicToggle() {
     <button id="music-toggle" onClick={toggleMusic} title={isPlaying ? "Mute" : "Play music"}>
       <div className="music-toggle-container">
         <img
-          src={isPlaying ? `${import.meta.env.BASE_URL}s-on.png` : `${import.meta.env.BASE_URL}s-off.png`}
+          src={isPlaying ? `${import.meta.env.BASE_URL}s-on.webp` : `${import.meta.env.BASE_URL}s-off.webp`}
           alt="Music Toggle"
           className="music-toggle-icon"
         />

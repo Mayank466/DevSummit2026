@@ -18,33 +18,33 @@ export const judges = [
 ];
 
 export const party = [
-  { id: 't1', name: 'Yogesh Khandelwal', role: 'Lead', imageUrl: '/people/party/yogesh.png' },
-  { id: 't2', name: 'Dev Sharan', role: 'Co-Lead', imageUrl: '/people/party/devsharan.png' },
-  { id: 't3', name: 'Mayank Biswas', role: 'Technical Head', imageUrl: '/people/party/mayank.png' },
-  { id: 't4', name: 'Anup', role: 'Technical Head', imageUrl: '/people/party/anup.png' },
-  { id: 't5', name: 'Jaydeep', role: 'Treasurer', imageUrl: '/people/party/jaydeep.png' },
-  { id: 't6', name: 'Abhinay Yadav', role: 'Operation Head', imageUrl: '/people/party/abhinay.png' },
-  { id: 't7', name: 'Rehan Kumar Singh', role: 'Logistics Head', imageUrl: '/people/party/rehan.png' },
-  { id: 't8', name: 'Mihir', role: 'Social Media Head', imageUrl: '/people/party/mihir.png' },
-  { id: 't9', name: 'Ayush', role: 'Social Media Head', imageUrl: '/people/party/ayush.png' },
-  { id: 't10', name: 'Priyanshu Kumar', role: 'Marketing & Outreach', imageUrl: '/people/party/priyanshu.png' },
-  { id: 't11', name: 'Ashish', role: 'Marketing & Outreach', imageUrl: '/people/party/ashish.png' },
-  { id: 't12', name: 'Milan Singh', role: 'Marketing & Outreach', imageUrl: '/people/party/milan.png' },
-  { id: 't13', name: 'Deepika Kumari', role: 'Decoration Head', imageUrl: '/people/party/deepika.png' },
+  { id: 't1', name: 'Yogesh Khandelwal', role: 'Lead', imageUrl: '/people/party/yogesh.webp' },
+  { id: 't2', name: 'Dev Sharan', role: 'Co-Lead', imageUrl: '/people/party/devsharan.webp' },
+  { id: 't3', name: 'Mayank Biswas', role: 'Technical Head', imageUrl: '/people/party/mayank.webp' },
+  { id: 't4', name: 'Anup', role: 'Technical Head', imageUrl: '/people/party/anup.webp' },
+  { id: 't5', name: 'Jaydeep', role: 'Treasurer', imageUrl: '/people/party/jaydeep.webp' },
+  { id: 't6', name: 'Abhinay Yadav', role: 'Operation Head', imageUrl: '/people/party/abhinay.webp' },
+  { id: 't7', name: 'Rehan Kumar Singh', role: 'Logistics Head', imageUrl: '/people/party/rehan.webp' },
+  { id: 't8', name: 'Mihir', role: 'Social Media Head', imageUrl: '/people/party/mihir.webp' },
+  { id: 't9', name: 'Ayush', role: 'Social Media Head', imageUrl: '/people/party/ayush.webp' },
+  { id: 't10', name: 'Priyanshu Kumar', role: 'Marketing & Outreach', imageUrl: '/people/party/priyanshu.webp' },
+  { id: 't11', name: 'Ashish', role: 'Marketing & Outreach', imageUrl: '/people/party/ashish.webp' },
+  { id: 't12', name: 'Milan Singh', role: 'Marketing & Outreach', imageUrl: '/people/party/milan.webp' },
+  { id: 't13', name: 'Deepika Kumari', role: 'Decoration Head', imageUrl: '/people/party/deepika.webp' },
 ];
 
 export const programChair = {
   id: 'pc1',
   name: "Prof.(Dr.) Om Prakash Sharma",
   description: "Pro President, Jagan Nath University, Jaipur\n" + "Dean, Faculty of Engineering and Technology",
-  imageUrl: "/people/opsharma.png"
+  imageUrl: "/people/opsharma.webp"
 };
 
 export const conveyners = [
-  { id: 'c1', name: "Dr. Renu Bagoria", description: "Professor, TIC(CS)", imageUrl: "/people/renu.png" },
-  { id: 'c2', name: "Dr. Rahul Misra", description: "Associate Professor", imageUrl: "/people/rahul.png" },
-  { id: 'c3', name: "Dr. Rishi Kumar Sharma", description: "Associate Professor", imageUrl: "/people/rishi.png" },
-  { id: 'c4', name: "Mr. Raghu Nandan Singh Hada", description: "Assistant Professor", imageUrl: "/people/raghu.png" },
+  { id: 'c1', name: "Dr. Renu Bagoria", description: "Professor, TIC(CS)", imageUrl: "/people/renu.webp" },
+  { id: 'c2', name: "Dr. Rahul Misra", description: "Associate Professor", imageUrl: "/people/rahul.webp" },
+  { id: 'c3', name: "Dr. Rishi Kumar Sharma", description: "Associate Professor", imageUrl: "/people/rishi.webp" },
+  { id: 'c4', name: "Mr. Raghu Nandan Singh Hada", description: "Assistant Professor", imageUrl: "/people/raghu.webp" },
 ];
 
 export const timelineData = [

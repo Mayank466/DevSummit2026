@@ -36,7 +36,7 @@ export default function People({ id, title, subtitle, people, titleGlowClass = "
                   <div className="person-avatar-wrap">
                     <div className="person-avatar">
                       {p.imageUrl ? (
-                        <img src={p.imageUrl.startsWith('/') ? `${import.meta.env.BASE_URL}${p.imageUrl.slice(1)}` : p.imageUrl} alt={p.name} className="avatar-img" />
+                        <img src={p.imageUrl.startsWith('/') ? `${import.meta.env.BASE_URL}${p.imageUrl.slice(1)}` : p.imageUrl} alt={p.name} className="avatar-img" loading="lazy" width="128" height="128" />
                       ) : (
                         <div className="avatar-inner"><span className="avatar-placeholder">{isComingSoon ? 'Coming Soon' : '?'}</span></div>
                       )}
@@ -64,7 +64,7 @@ export default function People({ id, title, subtitle, people, titleGlowClass = "
                   <div className="person-avatar-wrap">
                     <div className="person-avatar">
                       {p.imageUrl ? (
-                        <img src={p.imageUrl.startsWith('/') ? `${import.meta.env.BASE_URL}${p.imageUrl.slice(1)}` : p.imageUrl} alt={p.name} className="avatar-img" />
+                        <img src={p.imageUrl.startsWith('/') ? `${import.meta.env.BASE_URL}${p.imageUrl.slice(1)}` : p.imageUrl} alt={p.name} className="avatar-img" loading="lazy" width="128" height="128" />
                       ) : (
                         <div className="avatar-inner"><span className="avatar-placeholder">{isComingSoon ? 'Coming Soon' : '?'}</span></div>
                       )}

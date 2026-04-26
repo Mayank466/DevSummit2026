@@ -20,6 +20,7 @@ const Faculty = lazy(() => import("@/components/Faculty"));
 const FAQ = lazy(() => import("@/components/FAQ"));
 const Footer = lazy(() => import("@/components/Footer"));
 const ScrollObserver = lazy(() => import("@/components/ScrollObserver"));
+const Merch = lazy(() => import("@/components/Merch"));
 
 import { mentors, judges, party, programChair, conveyners } from "@/constants/data";
 
@@ -55,6 +56,7 @@ export default function Home() {
             <About />
             <Countdown />
             <Themes />
+            <Merch />
             <Timeline />
             <Prizes />
             <Sponsors />
