@@ -37,6 +37,18 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const lenis = window.__lenis;
+    if (lenis) {
+      lenis.scrollTo(href, { offset: 0, duration: 1.2 });
+    } else {
+      const el = document.getElementById(href.replace("#", ""));
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    closeMobileMenu();
+  };
+
   const navLinks = [
     { href: "#about", label: "About" },
     { href: "#themes", label: "Themes" },
@@ -67,7 +79,7 @@ export default function Navbar() {
             <ul className="nav-menu">
               {navLinks.map(({ href, label }) => (
                 <li key={href}>
-                  <a href={href} className="nav-link">{label}</a>
+                  <a href={href} className="nav-link" onClick={(e) => handleNavClick(e, href)}>{label}</a>
                 </li>
               ))}
             </ul>
@@ -126,7 +138,7 @@ export default function Navbar() {
                 className="drawer-nav-item"
                 style={{ "--i": i } as React.CSSProperties}
               >
-                <a href={href} className="drawer-nav-link" onClick={closeMobileMenu}>
+                <a href={href} className="drawer-nav-link" onClick={(e) => handleNavClick(e, href)}>
                   <span className="drawer-nav-label">{label}</span>
                   <span className="drawer-nav-arrow">→</span>
                 </a>

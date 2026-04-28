@@ -34,9 +34,21 @@
 }
 
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 5rem;
   background-color: hsl(var(--background));
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
 body {
@@ -371,6 +383,8 @@ h6,
   position: fixed;
   top: 0;
   left: 0;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* ===== Navbar (Unified Header) ===== */
