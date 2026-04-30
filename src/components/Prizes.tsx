@@ -13,7 +13,7 @@ export default function Prizes() {
         <div className="prize-main-banner scroll-animate">
           <div className="prize-banner-content">
             <span className="prize-label">TOTAL PRIZE POOL WORTH</span>
-            <h3 className="prize-amount">₹5,00,000</h3>
+            <h3 className="prize-amount">₹11,00,000</h3>
           </div>
           <div className="prize-banner-glow"></div>
         </div>
